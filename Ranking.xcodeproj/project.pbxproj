@@ -11,6 +11,25 @@
 		B01441752AEC4E5300CA92C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441742AEC4E5300CA92C9 /* ContentView.swift */; };
 		B01441772AEC4E5500CA92C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01441762AEC4E5500CA92C9 /* Assets.xcassets */; };
 		B014417A2AEC4E5500CA92C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01441792AEC4E5500CA92C9 /* Preview Assets.xcassets */; };
+		B01441A12AEC510D00CA92C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A02AEC510D00CA92C9 /* LoginView.swift */; };
+		B01441A32AED3F9E00CA92C9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A22AED3F9E00CA92C9 /* DashboardView.swift */; };
+		B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A72AED500700CA92C9 /* AddDuelView.swift */; };
+		B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A92AED502600CA92C9 /* LeagueView.swift */; };
+		B01441AC2AED506200CA92C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441AB2AED506200CA92C9 /* SettingsView.swift */; };
+		B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */; };
+		B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */; };
+		B0507EC12AF68AAA008E6D97 /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC02AF68AAA008E6D97 /* MainNavView.swift */; };
+		B0507EC72AF6A1DE008E6D97 /* LeagueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC62AF6A1DE008E6D97 /* LeagueListView.swift */; };
+		B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC92AF7B8ED008E6D97 /* BattelView.swift */; };
+		B0507ECD2AF7CA6E008E6D97 /* DetailLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ECC2AF7CA6E008E6D97 /* DetailLeagueView.swift */; };
+		B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ECE2AF7CB69008E6D97 /* BarChartView.swift */; };
+		B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */; };
+		B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */; };
+		B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */; };
+		B0507EDB2B012D7B008E6D97 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDA2B012D7B008E6D97 /* PlayerModel.swift */; };
+		B0507EDD2B012D9F008E6D97 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDC2B012D9F008E6D97 /* PlayerService.swift */; };
+		B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */; };
+		B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +38,25 @@
 		B01441742AEC4E5300CA92C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B01441762AEC4E5500CA92C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01441792AEC4E5500CA92C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B01441A02AEC510D00CA92C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B01441A22AED3F9E00CA92C9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B01441A72AED500700CA92C9 /* AddDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDuelView.swift; sourceTree = "<group>"; };
+		B01441A92AED502600CA92C9 /* LeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueView.swift; sourceTree = "<group>"; };
+		B01441AB2AED506200CA92C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLeagueView.swift; sourceTree = "<group>"; };
+		B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBattelView.swift; sourceTree = "<group>"; };
+		B0507EC02AF68AAA008E6D97 /* MainNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavView.swift; sourceTree = "<group>"; };
+		B0507EC62AF6A1DE008E6D97 /* LeagueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueListView.swift; sourceTree = "<group>"; };
+		B0507EC92AF7B8ED008E6D97 /* BattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattelView.swift; sourceTree = "<group>"; };
+		B0507ECC2AF7CA6E008E6D97 /* DetailLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLeagueView.swift; sourceTree = "<group>"; };
+		B0507ECE2AF7CB69008E6D97 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlayerView.swift; sourceTree = "<group>"; };
+		B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBattelView.swift; sourceTree = "<group>"; };
+		B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBattelView.swift; sourceTree = "<group>"; };
+		B0507EDA2B012D7B008E6D97 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		B0507EDC2B012D9F008E6D97 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
+		B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
+		B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +89,11 @@
 		B01441712AEC4E5300CA92C9 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
+				B0507ED92B012C2D008E6D97 /* Helpers */,
+				B0507ED82B012C24008E6D97 /* Services */,
+				B0507ED72B012C1A008E6D97 /* ViewModel */,
+				B0507ED62B012C0D008E6D97 /* Model */,
+				B01441A62AED4F5E00CA92C9 /* Views */,
 				B01441722AEC4E5300CA92C9 /* RankingApp.swift */,
 				B01441742AEC4E5300CA92C9 /* ContentView.swift */,
 				B01441762AEC4E5500CA92C9 /* Assets.xcassets */,
@@ -65,6 +108,116 @@
 				B01441792AEC4E5500CA92C9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B01441A62AED4F5E00CA92C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EBD2AF64BC2008E6D97 /* components */,
+				B0507EC82AF7B8C4008E6D97 /* Battel */,
+				B0507EC42AF68CCE008E6D97 /* League */,
+				B0507EB92AF41322008E6D97 /* Dashboard */,
+				B01441A02AEC510D00CA92C9 /* LoginView.swift */,
+				B01441AB2AED506200CA92C9 /* SettingsView.swift */,
+				B0507EC02AF68AAA008E6D97 /* MainNavView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0507EB92AF41322008E6D97 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EBA2AF4133D008E6D97 /* components */,
+				B01441A22AED3F9E00CA92C9 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B0507EBA2AF4133D008E6D97 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B0507EBD2AF64BC2008E6D97 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */,
+				B0507ECE2AF7CB69008E6D97 /* BarChartView.swift */,
+				B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */,
+				B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B0507EC42AF68CCE008E6D97 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EC52AF68CE4008E6D97 /* components */,
+				B01441A92AED502600CA92C9 /* LeagueView.swift */,
+				B0507ECC2AF7CA6E008E6D97 /* DetailLeagueView.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		B0507EC52AF68CE4008E6D97 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EC62AF6A1DE008E6D97 /* LeagueListView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B0507EC82AF7B8C4008E6D97 /* Battel */ = {
+			isa = PBXGroup;
+			children = (
+				B0507ECB2AF7B8F2008E6D97 /* components */,
+				B0507EC92AF7B8ED008E6D97 /* BattelView.swift */,
+				B01441A72AED500700CA92C9 /* AddDuelView.swift */,
+				B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */,
+				B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */,
+			);
+			path = Battel;
+			sourceTree = "<group>";
+		};
+		B0507ECB2AF7B8F2008E6D97 /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B0507ED62B012C0D008E6D97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EDA2B012D7B008E6D97 /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0507ED72B012C1A008E6D97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B0507ED82B012C24008E6D97 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EDC2B012D9F008E6D97 /* PlayerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0507ED92B012C2D008E6D97 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +290,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0507EC72AF6A1DE008E6D97 /* LeagueListView.swift in Sources */,
+				B01441AC2AED506200CA92C9 /* SettingsView.swift in Sources */,
+				B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */,
+				B01441A12AEC510D00CA92C9 /* LoginView.swift in Sources */,
+				B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */,
+				B0507ECD2AF7CA6E008E6D97 /* DetailLeagueView.swift in Sources */,
+				B01441A32AED3F9E00CA92C9 /* DashboardView.swift in Sources */,
+				B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */,
+				B0507EDD2B012D9F008E6D97 /* PlayerService.swift in Sources */,
+				B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */,
+				B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */,
+				B0507EC12AF68AAA008E6D97 /* MainNavView.swift in Sources */,
 				B01441752AEC4E5300CA92C9 /* ContentView.swift in Sources */,
+				B0507EDB2B012D7B008E6D97 /* PlayerModel.swift in Sources */,
+				B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */,
 				B01441732AEC4E5300CA92C9 /* RankingApp.swift in Sources */,
+				B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */,
+				B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */,
+				B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */,
+				B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */,
+				B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
