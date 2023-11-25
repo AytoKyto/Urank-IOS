@@ -1,34 +1,30 @@
-//
-//  SettingsView.swift
-//  Ranking
-//
-//  Created by Mathis Fleury on 28/10/2023.
-//
-
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.dismiss) private var dismiss
+    @State private var users: [User] = [] // Maintenant un tableau de User
 
     var body: some View {
-        NavigationView {
-            NavigationLink("Test") {
-                Text("Add")
-                           .navigationTitle("Detail Title")
-                           .navigationBarBackButtonHidden(true)
-                           .toolbar {
-                               ToolbarItem(placement: .navigationBarLeading) {
-                                   Button(action: {
-                                       // Action personnalisée
-                                   }) {
-                                       HStack {
-                                           Image(systemName: "arrow.backward")
-                                           Text("Custom Back")
-                                       }
-                                   }
-                               }
-                           }
-                           
+        VStack {
+            if users.isEmpty {
+                Button("Charger les utilisateurs") {
+                    fetchData()
+                }
+            } else {
+                // Affichez les informations de tous les utilisateurs ou du premier utilisateur
+                ForEach(users, id: \.id) { user in
+                    Text("Nom d'utilisateur : \(user.name)")
+                    // Affichez d'autres informations utilisateur si nécessaire
+                }
+            }
+        }
+    }
+
+    func fetchData() {
+        Task {
+            do {
+                users = try await getUser() // getUsers renvoie maintenant un tableau de User
+            } catch {
+                print("Erreur lors de la récupération des utilisateurs : \(error)")
             }
         }
     }
@@ -39,4 +35,3 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
     }
 }
-

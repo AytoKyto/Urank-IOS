@@ -9,36 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            NavigationLink("Go to Settings", destination: SetingsView())
-        }
-    }
-}
-
-struct SetingsView: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationView {
-            NavigationLink("Test") {
-                Text("Detail View")
-                    .navigationTitle("Detail Title")
-                    .navigationBarBackButtonHidden(true)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button {
-                                // Action personnalisée du bouton de retour
-                                dismiss()
-                            } label: {
-                                HStack {
-                                    Image(systemName: "arrow.backward")
-                                    Text("Custom Backk")
-                                }
-                            }
-                        }
-                    }
-            }
-        }
+        SettingsView()
     }
 }
 
