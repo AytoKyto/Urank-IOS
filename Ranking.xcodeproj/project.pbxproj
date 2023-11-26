@@ -34,6 +34,8 @@
 		B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */; };
 		B0507EDD2B012D9F008E6D97 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDC2B012D9F008E6D97 /* PlayerService.swift */; };
 		B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */; };
+		B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC082B123F8200CDA542 /* Dashboard.swift */; };
+		B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC0A2B12432E00CDA542 /* DashboardService.swift */; };
 		B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		B0507EDC2B012D9F008E6D97 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
 		B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		B062EC072B12009A00CDA542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B062EC082B123F8200CDA542 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		B062EC0A2B12432E00CDA542 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +213,7 @@
 				B006A4D82B0A469700AA6D48 /* League.swift */,
 				B006A4DA2B0A46B500AA6D48 /* LeagueUser.swift */,
 				B006A4DC2B0A46D300AA6D48 /* Duel.swift */,
+				B062EC082B123F8200CDA542 /* Dashboard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			children = (
 				B0507EDC2B012D9F008E6D97 /* PlayerService.swift */,
 				B006A4DE2B0A496600AA6D48 /* UserService.swift */,
+				B062EC0A2B12432E00CDA542 /* DashboardService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -325,10 +331,12 @@
 				B01441752AEC4E5300CA92C9 /* ContentView.swift in Sources */,
 				B006A4DD2B0A46D300AA6D48 /* Duel.swift in Sources */,
 				B006A4D72B0A467800AA6D48 /* UserPayment.swift in Sources */,
+				B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */,
 				B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */,
 				B01441732AEC4E5300CA92C9 /* RankingApp.swift in Sources */,
 				B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */,
 				B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */,
+				B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */,
 				B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */,
 				B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */,
 				B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */,

@@ -1,19 +1,18 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var users: [User] = [] // Maintenant un tableau de User
+    @State private var dashboardData: Dashboard?
 
     var body: some View {
         VStack {
-            if users.isEmpty {
-                Button("Charger les utilisateurs") {
-                    fetchData()
-                }
+            if let dashboard = dashboardData {
+                // Si dashboardData contient des informations
+                Text("Message : \(dashboard.message)")
+                // Ajoutez ici plus de détails si dashboard contient d'autres informations
             } else {
-                // Affichez les informations de tous les utilisateurs ou du premier utilisateur
-                ForEach(users, id: \.id) { user in
-                    Text("Nom d'utilisateur : \(user.name)")
-                    // Affichez d'autres informations utilisateur si nécessaire
+                // Si dashboardData est nil, affichez un bouton pour charger les données
+                Button("Charger les données du tableau de bord") {
+                    fetchData()
                 }
             }
         }
@@ -22,9 +21,10 @@ struct SettingsView: View {
     func fetchData() {
         Task {
             do {
-                users = try await getUser() // getUsers renvoie maintenant un tableau de User
+                dashboardData = try await getDashboard()
+                print(dashboardData?.leagueUserData)
             } catch {
-                print("Erreur lors de la récupération des utilisateurs : \(error)")
+                print("Erreur lors de la récupération des données du tableau de bord : \(error)")
             }
         }
     }
