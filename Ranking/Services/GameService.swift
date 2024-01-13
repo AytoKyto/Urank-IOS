@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+
+class GameService {
+    private var apiSettings: ApiSettings
+    
+    init(apiSettings: ApiSettings) {
+        self.apiSettings = apiSettings
+    }
+    
+}

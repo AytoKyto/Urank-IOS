@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var authManager = AuthManager.shared // Utilisez AuthManager.shared pour partager la même instance
+
     var body: some View {
-        SettingsView()
+        Group {
+            if authManager.isAuthenticated {
+                MainNavView() // Vue principale de votre application
+            } else {
+                AuthMainNav()
+            }
+        }
+        .onAppear {
+            authManager.checkAuthentication()
+            print(authManager.isAuthenticated)
+        }
     }
 }
 

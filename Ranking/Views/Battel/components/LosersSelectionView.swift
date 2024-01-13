@@ -14,7 +14,7 @@ struct LosersSelectionView: View {
     var body: some View {
         VStack {
             Text("Select Losers")
-                .font(.title)
+                .font(.title3)
 
             List(players, id: \.self) { player in
                 HStack {

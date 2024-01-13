@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RankingApp: App {
+    var apiSettings = ApiSettings()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(apiSettings)
         }
     }
 }

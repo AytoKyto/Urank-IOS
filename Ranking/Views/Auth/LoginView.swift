@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var isShowAlert = false
+    @State private var isLoggedIn = false
 
     var body: some View {
         NavigationView {
@@ -29,7 +30,7 @@ struct LoginView: View {
                 Button("Login") {
                     authViewModel.login(request: LoginRequest(email: email, password: password)) { success in
                         if success {
-                            // Naviguer vers la prochaine vue ou afficher le succès
+                            isLoggedIn = true
                         } else {
                             isShowAlert = true
                         }
@@ -38,9 +39,11 @@ struct LoginView: View {
                 .disabled(email.isEmpty || password.isEmpty)
                 .padding()
 
+            
+
                 Spacer()
             }
-            .navigationBarTitle("Connexion")
+            .navigationBarBackButtonHidden(true)
             .alert(isPresented: $isShowAlert) {
                 Alert(
                     title: Text("Erreur de connexion"),
@@ -49,11 +52,5 @@ struct LoginView: View {
                 )
             }
         }
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }

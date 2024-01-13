@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct LeagueSelectionView: View {
-    @Binding var selectedLeague: Int
+    @Binding var selectedLeague: String?
     let leagues = ["League A", "League B", "League C"]
 
     var body: some View {
-        VStack {
-            Picker("Select League", selection: $selectedLeague) {
-                ForEach(0..<leagues.count) { index in
-                    Text(leagues[index]).tag(index)
-                }
+        List(leagues, id: \.self) { league in
+            Button(action: {
+                selectedLeague = league
+            }) {
+                Text(league)
             }
-            .pickerStyle(SegmentedPickerStyle())
         }
+        .navigationBarTitle("Sélectionner une ligue", displayMode: .inline)
+    }
+}
+
+struct LeagueSelectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueSelectionView(selectedLeague: .constant(nil))
     }
 }

@@ -14,7 +14,7 @@ struct WinnersSelectionView: View {
     var body: some View {
         VStack {
             Text("Select Winners")
-                .font(.title)
+                .font(.title3)
 
             List(players, id: \.self) { player in
                 HStack {
@@ -36,5 +36,11 @@ struct WinnersSelectionView: View {
                 }
             }
         }
+    }
+}
+
+struct WinnersSelectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        WinnersSelectionView(selectedWinners: .constant([]))
     }
 }

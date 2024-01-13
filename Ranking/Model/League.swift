@@ -14,11 +14,10 @@ struct League: Decodable {
     let adminUserId: Int
     let createdAt: String?
     let updatedAt: String?
-    
+    let admin_user: [User]
+
     enum CodingKeys: String, CodingKey {
-        case id
-        case icon
-        case name
+        case id, icon, name, admin_user
         case adminUserId = "admin_user_id"
         case createdAt = "created_at"
         case updatedAt = "updated_at"

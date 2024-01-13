@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A080D8D061C905FC3E43C386 /* Pods_Ranking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4B688857A1FFD95698BB11 /* Pods_Ranking.framework */; };
 		B006A4D52B0A466000AA6D48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006A4D42B0A466000AA6D48 /* User.swift */; };
 		B006A4D72B0A467800AA6D48 /* UserPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006A4D62B0A467800AA6D48 /* UserPayment.swift */; };
 		B006A4D92B0A469700AA6D48 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006A4D82B0A469700AA6D48 /* League.swift */; };
@@ -22,6 +23,13 @@
 		B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A72AED500700CA92C9 /* AddDuelView.swift */; };
 		B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A92AED502600CA92C9 /* LeagueView.swift */; };
 		B01441AC2AED506200CA92C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441AB2AED506200CA92C9 /* SettingsView.swift */; };
+		B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E54FB2B3CAA76003FF467 /* Login.swift */; };
+		B0437A232B49B46E00DFD203 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A222B49B46E00DFD203 /* GameService.swift */; };
+		B0437A272B49BB9600DFD203 /* DuelSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */; };
+		B0437A292B49BBF500DFD203 /* LosersSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A282B49BBF500DFD203 /* LosersSelectionView.swift */; };
+		B0437A2B2B49BC0D00DFD203 /* WinnersSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2A2B49BC0D00DFD203 /* WinnersSelectionView.swift */; };
+		B0437A2D2B49BC2100DFD203 /* LeagueSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */; };
+		B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */; };
 		B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */; };
 		B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */; };
 		B0507EC12AF68AAA008E6D97 /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC02AF68AAA008E6D97 /* MainNavView.swift */; };
@@ -37,9 +45,18 @@
 		B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC082B123F8200CDA542 /* Dashboard.swift */; };
 		B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC0A2B12432E00CDA542 /* DashboardService.swift */; };
 		B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */; };
+		B0DD26502B405883004C0EB3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD264F2B405883004C0EB3 /* AuthService.swift */; };
+		B0DD26532B406201004C0EB3 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD26522B406201004C0EB3 /* AuthManager.swift */; };
+		B0DD26552B4085FD004C0EB3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD26542B4085FD004C0EB3 /* AuthViewModel.swift */; };
+		B0DD265A2B41B239004C0EB3 /* AuthMainNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */; };
+		B0DD265C2B41B2F5004C0EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */; };
+		B0DD265E2B447663004C0EB3 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD265D2B447663004C0EB3 /* ApiSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA12B7221B185C98DC7BAE1 /* Pods-Ranking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ranking.debug.xcconfig"; path = "Target Support Files/Pods-Ranking/Pods-Ranking.debug.xcconfig"; sourceTree = "<group>"; };
+		9B78917DCA6BD58283DDE3CC /* Pods-Ranking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ranking.release.xcconfig"; path = "Target Support Files/Pods-Ranking/Pods-Ranking.release.xcconfig"; sourceTree = "<group>"; };
+		9E4B688857A1FFD95698BB11 /* Pods_Ranking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ranking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B006A4D42B0A466000AA6D48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B006A4D62B0A467800AA6D48 /* UserPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPayment.swift; sourceTree = "<group>"; };
 		B006A4D82B0A469700AA6D48 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
@@ -56,6 +73,13 @@
 		B01441A72AED500700CA92C9 /* AddDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDuelView.swift; sourceTree = "<group>"; };
 		B01441A92AED502600CA92C9 /* LeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueView.swift; sourceTree = "<group>"; };
 		B01441AB2AED506200CA92C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B01E54FB2B3CAA76003FF467 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B0437A222B49B46E00DFD203 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelSummaryView.swift; sourceTree = "<group>"; };
+		B0437A282B49BBF500DFD203 /* LosersSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosersSelectionView.swift; sourceTree = "<group>"; };
+		B0437A2A2B49BC0D00DFD203 /* WinnersSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersSelectionView.swift; sourceTree = "<group>"; };
+		B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueSelectionView.swift; sourceTree = "<group>"; };
+		B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueUserService.swift; sourceTree = "<group>"; };
 		B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLeagueView.swift; sourceTree = "<group>"; };
 		B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBattelView.swift; sourceTree = "<group>"; };
 		B0507EC02AF68AAA008E6D97 /* MainNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavView.swift; sourceTree = "<group>"; };
@@ -72,6 +96,12 @@
 		B062EC082B123F8200CDA542 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		B062EC0A2B12432E00CDA542 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoxView.swift; sourceTree = "<group>"; };
+		B0DD264F2B405883004C0EB3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B0DD26522B406201004C0EB3 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B0DD26542B4085FD004C0EB3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMainNav.swift; sourceTree = "<group>"; };
+		B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B0DD265D2B447663004C0EB3 /* ApiSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +109,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A080D8D061C905FC3E43C386 /* Pods_Ranking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22D7ED70349AAB9BD6B28B31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BA12B7221B185C98DC7BAE1 /* Pods-Ranking.debug.xcconfig */,
+				9B78917DCA6BD58283DDE3CC /* Pods-Ranking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		790374FBCC7D7DF6BBB9ECD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E4B688857A1FFD95698BB11 /* Pods_Ranking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B01441662AEC4E5300CA92C9 = {
 			isa = PBXGroup;
 			children = (
 				B01441712AEC4E5300CA92C9 /* Ranking */,
 				B01441702AEC4E5300CA92C9 /* Products */,
+				22D7ED70349AAB9BD6B28B31 /* Pods */,
+				790374FBCC7D7DF6BBB9ECD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,13 +179,14 @@
 		B01441A62AED4F5E00CA92C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0DD26582B41B1F0004C0EB3 /* Auth */,
 				B0507EBD2AF64BC2008E6D97 /* components */,
 				B0507EC82AF7B8C4008E6D97 /* Battel */,
 				B0507EC42AF68CCE008E6D97 /* League */,
 				B0507EB92AF41322008E6D97 /* Dashboard */,
-				B01441A02AEC510D00CA92C9 /* LoginView.swift */,
 				B01441AB2AED506200CA92C9 /* SettingsView.swift */,
 				B0507EC02AF68AAA008E6D97 /* MainNavView.swift */,
+				B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,8 +242,9 @@
 			children = (
 				B0507ECB2AF7B8F2008E6D97 /* components */,
 				B0507EC92AF7B8ED008E6D97 /* BattelView.swift */,
-				B01441A72AED500700CA92C9 /* AddDuelView.swift */,
 				B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */,
+				B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */,
+				B01441A72AED500700CA92C9 /* AddDuelView.swift */,
 				B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */,
 			);
 			path = Battel;
@@ -201,6 +253,9 @@
 		B0507ECB2AF7B8F2008E6D97 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */,
+				B0437A2A2B49BC0D00DFD203 /* WinnersSelectionView.swift */,
+				B0437A282B49BBF500DFD203 /* LosersSelectionView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -208,6 +263,7 @@
 		B0507ED62B012C0D008E6D97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B01E54FB2B3CAA76003FF467 /* Login.swift */,
 				B006A4D42B0A466000AA6D48 /* User.swift */,
 				B006A4D62B0A467800AA6D48 /* UserPayment.swift */,
 				B006A4D82B0A469700AA6D48 /* League.swift */,
@@ -221,6 +277,7 @@
 		B0507ED72B012C1A008E6D97 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B0DD26542B4085FD004C0EB3 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,6 +288,9 @@
 				B0507EDC2B012D9F008E6D97 /* PlayerService.swift */,
 				B006A4DE2B0A496600AA6D48 /* UserService.swift */,
 				B062EC0A2B12432E00CDA542 /* DashboardService.swift */,
+				B0DD264F2B405883004C0EB3 /* AuthService.swift */,
+				B0437A222B49B46E00DFD203 /* GameService.swift */,
+				B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -239,8 +299,19 @@
 			isa = PBXGroup;
 			children = (
 				B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */,
+				B0DD26522B406201004C0EB3 /* AuthManager.swift */,
+				B0DD265D2B447663004C0EB3 /* ApiSettings.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B0DD26582B41B1F0004C0EB3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B01441A02AEC510D00CA92C9 /* LoginView.swift */,
+				B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B014417D2AEC4E5500CA92C9 /* Build configuration list for PBXNativeTarget "Ranking" */;
 			buildPhases = (
+				65240B6C847F94FFF4F43372 /* [CP] Check Pods Manifest.lock */,
 				B014416B2AEC4E5300CA92C9 /* Sources */,
 				B014416C2AEC4E5300CA92C9 /* Frameworks */,
 				B014416D2AEC4E5300CA92C9 /* Resources */,
+				D5F16A9CA79ED7FB509A74D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,13 +381,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65240B6C847F94FFF4F43372 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ranking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5F16A9CA79ED7FB509A74D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ranking/Pods-Ranking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ranking/Pods-Ranking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ranking/Pods-Ranking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B014416B2AEC4E5300CA92C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0437A2D2B49BC2100DFD203 /* LeagueSelectionView.swift in Sources */,
 				B0507EC72AF6A1DE008E6D97 /* LeagueListView.swift in Sources */,
+				B0DD26502B405883004C0EB3 /* AuthService.swift in Sources */,
 				B01441AC2AED506200CA92C9 /* SettingsView.swift in Sources */,
+				B0437A232B49B46E00DFD203 /* GameService.swift in Sources */,
 				B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */,
 				B01441A12AEC510D00CA92C9 /* LoginView.swift in Sources */,
 				B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */,
@@ -323,6 +441,9 @@
 				B006A4D92B0A469700AA6D48 /* League.swift in Sources */,
 				B01441A32AED3F9E00CA92C9 /* DashboardView.swift in Sources */,
 				B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */,
+				B0DD26532B406201004C0EB3 /* AuthManager.swift in Sources */,
+				B0DD265C2B41B2F5004C0EB3 /* SignUpView.swift in Sources */,
+				B0DD26552B4085FD004C0EB3 /* AuthViewModel.swift in Sources */,
 				B0507EDD2B012D9F008E6D97 /* PlayerService.swift in Sources */,
 				B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */,
 				B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */,
@@ -332,14 +453,21 @@
 				B006A4DD2B0A46D300AA6D48 /* Duel.swift in Sources */,
 				B006A4D72B0A467800AA6D48 /* UserPayment.swift in Sources */,
 				B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */,
+				B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */,
 				B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */,
+				B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */,
 				B01441732AEC4E5300CA92C9 /* RankingApp.swift in Sources */,
 				B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */,
 				B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */,
 				B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */,
 				B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */,
 				B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */,
+				B0DD265E2B447663004C0EB3 /* ApiSettings.swift in Sources */,
+				B0DD265A2B41B239004C0EB3 /* AuthMainNav.swift in Sources */,
 				B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */,
+				B0437A292B49BBF500DFD203 /* LosersSelectionView.swift in Sources */,
+				B0437A2B2B49BC0D00DFD203 /* WinnersSelectionView.swift in Sources */,
+				B0437A272B49BB9600DFD203 /* DuelSummaryView.swift in Sources */,
 				B006A4D52B0A466000AA6D48 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +591,7 @@
 		};
 		B014417E2AEC4E5500CA92C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BA12B7221B185C98DC7BAE1 /* Pods-Ranking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +622,7 @@
 		};
 		B014417F2AEC4E5500CA92C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B78917DCA6BD58283DDE3CC /* Pods-Ranking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

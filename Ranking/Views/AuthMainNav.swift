@@ -9,10 +9,43 @@ import SwiftUI
 
 struct AuthMainNav: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Bienvenue dans Ranking")
+                    .font(.largeTitle)
+                    .padding()
+
+                Text("Rejoignez la communauté ou connectez-vous pour continuer.")
+                    .font(.body)
+                    .padding()
+
+                NavigationLink(destination: SignUpView()) {
+                    Text("Créer un compte")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+                .padding()
+
+                NavigationLink(destination: LoginView()) {
+                    Text("Se connecter")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(8)
+                }
+                .padding()
+
+                Spacer()
+            }
+            .navigationBarBackButtonHidden(true)
+        }
     }
 }
 
-#Preview {
-    AuthMainNav()
+struct AuthMainNav_Previews: PreviewProvider {
+    static var previews: some View {
+        AuthMainNav()
+    }
 }

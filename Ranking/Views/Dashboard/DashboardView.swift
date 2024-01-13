@@ -2,7 +2,8 @@ import SwiftUI
 
 struct DashboardView: View {
     @State private var highValue = "2000"
-    
+    @ObservedObject var authManager = AuthManager()
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -23,6 +24,10 @@ struct DashboardView: View {
 
                         }
                         .padding(.all, 20.0)
+                        
+                        Button("Login") {
+                            authManager.clearAccessToken()
+                        }
                         
                         Spacer()
                             .frame(height: 10.0)

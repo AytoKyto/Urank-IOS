@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class ApiSettings: ObservableObject {
+    @Published var apiUrl: String = "http://rank-back.test/api"
+}
+

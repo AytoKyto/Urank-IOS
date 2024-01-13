@@ -16,26 +16,17 @@ struct DuelSummaryView: View {
     var body: some View {
         VStack {
             Text("Duel Summary")
-                .font(.title)
-
-            Text("League: \(selectedLeague)")
-            Text("Winners: \(selectedWinners.map { "Player \($0 + 1)" }.joined(separator: ", "))")
-            Text("Losers: \(selectedLosers.map { "Player \($0 + 1)" }.joined(separator: ", "))")
-            Text("Description: \(duelDescription)")
-
-            Spacer()
-
-            HStack {
-                NavigationLink(destination: MainNavView()) {
-                    Text("Cancel")
-                        .padding()
-                }
-
-                Button("Add Duel") {
-                    // Ajouter le duel
-                }
-                .padding()
-            }
+            Text("Selected League: \(selectedLeague)")
+            Text("Selected Winners: \(selectedWinners.map { "Player \($0 + 1)" }.joined(separator: ", "))")
+            Text("Selected Losers: \(selectedLosers.map { "Player \($0 + 1)" }.joined(separator: ", "))")
+            Text("Duel Description: \(duelDescription)")
         }
+        .padding()
+    }
+}
+
+struct DuelSummaryView_Previews: PreviewProvider {
+    static var previews: some View {
+        DuelSummaryView(selectedLeague: "League A", selectedWinners: [0, 1], selectedLosers: [2], duelDescription: "Test Duel")
     }
 }
