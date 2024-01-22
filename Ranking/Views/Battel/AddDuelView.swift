@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct AddDuelView: View {
+    @StateObject private var leagueUserViewModel = LeagueUserViewModel()
+
     @State private var selectedLeagueIndex: Int?
     @State private var isLeagueSelectionPresented = false
     @State private var selectedWinners: Set<Int> = []
@@ -8,27 +10,45 @@ struct AddDuelView: View {
     @State private var duelDescription = ""
     @State private var isSummaryViewPresented = false
 
-    // Déclaration de la variable leagues
-    let leagues = ["League A", "League B", "League C", "League D", "League E"]
 
     var selectedLeagueBinding: Binding<String?> {
         Binding(
-            get: { selectedLeagueIndex.map { leagues[$0] } },
+            get: {
+                guard let id = selectedLeagueIndex,
+                      let leagues = leagueUserViewModel.leagueUserShow?.data,
+                      let index = leagues.firstIndex(where: { $0.league.id == id }) else {
+                    return nil
+                }
+                let league = leagues[index].league
+                return league.icon + " " + league.name
+            },
             set: { newValue in
-                if let index = leagues.firstIndex(of: newValue ?? "") {
-                    selectedLeagueIndex = index
-                    isLeagueSelectionPresented.toggle()
+                if let newValue = newValue,
+                   let leagues = leagueUserViewModel.leagueUserShow?.data,
+                   let index = leagues.firstIndex(where: { $0.league.name == newValue }) {
+                    selectedLeagueIndex = leagues[index].league.id
                 } else {
                     selectedLeagueIndex = nil
                 }
+                isLeagueSelectionPresented = false // Consider setting to false explicitly if needed
             }
         )
     }
 
+
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                Text("Sélectionnez une ligue")
+                if let leagueUserShow = leagueUserViewModel.leagueUserShow {
+                               // Afficher les données de leagueUserShow
+                           } else if leagueUserViewModel.isError {
+                               Text("Une erreur est survenue.")
+                           } else {
+                               Text("Chargement...")
+                           }
+                Text(leagueUserViewModel.leagueUserShow?.message ?? "Chargement...")
+                
+                Text(selectedLeagueBinding.wrappedValue ?? "Sélectionnez une ligue")
                     .font(.title3)
                     .foregroundColor(.gray)
                     .padding()
@@ -44,11 +64,20 @@ struct AddDuelView: View {
                 .cornerRadius(10)
 
                 if selectedLeagueIndex != nil {
-                    WinnersSelectionView(selectedWinners: $selectedWinners)
-                        .padding()
+                    if let leagueData = leagueUserViewModel.usersInLeague?.data {
+                        WinnersSelectionView(selectedWinners: $selectedWinners, usersData: leagueData)
+                            .padding()
+                    } else {
+                        Text("No users data available")
+                    }
+                    
+                    if let leagueData = leagueUserViewModel.usersInLeague?.data {
+                        LosersSelectionView(selectedLosers: $selectedWinners, usersData: leagueData)
+                            .padding()
+                    } else {
+                        Text("No users data available")
+                    }
 
-                    LosersSelectionView(selectedLosers: $selectedLosers)
-                        .padding()
                 }
 
                 TextField("Duel Description", text: $duelDescription)
@@ -72,13 +101,36 @@ struct AddDuelView: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .sheet(isPresented: $isLeagueSelectionPresented) {
-            LeagueSelectionView(selectedLeague: selectedLeagueBinding)
+            if let leagues = leagueUserViewModel.leagueUserShow?.data {
+                List(leagueUserViewModel.leagueUserShow?.data ?? [], id: \.id) { leagueUser in
+                    Button(action: {
+                        selectedLeagueIndex = leagueUser.league.id
+                        leagueUserViewModel.getUsersInLeague(leagueId: selectedLeagueIndex ?? 0)
+                        isLeagueSelectionPresented.toggle()
+                    }) {
+                        HStack {
+                            Text(leagueUser.league.icon)
+                            Text(leagueUser.league.name)
+                        }
+                    }
+                }
+                .navigationBarTitle("Sélectionner une ligue", displayMode: .inline)
+            }
         }
+
         .sheet(isPresented: $isSummaryViewPresented) {
-            DuelSummaryView(selectedLeague: leagues[selectedLeagueIndex!],
-                                                            selectedWinners: selectedWinners,
-                                                            selectedLosers: selectedLosers,
-                                                            duelDescription: duelDescription)
+            if let selectedLeagueIndex = selectedLeagueIndex,
+               let selectedLeagueName = leagueUserViewModel.leagueUserShow?.data?.first(where: { $0.league.id == selectedLeagueIndex })?.league.name {
+                DuelSummaryView(selectedLeague: selectedLeagueName,
+                                selectedWinners: selectedWinners,
+                                selectedLosers: selectedLosers,
+                                duelDescription: duelDescription)
+            } else {
+                Text("Sélectionnez une ligue")
+            }
+        }
+        .onAppear {
+            leagueUserViewModel.getLeagueUserShow()
         }
     }
 }

@@ -51,6 +51,7 @@
 		B0DD265A2B41B239004C0EB3 /* AuthMainNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */; };
 		B0DD265C2B41B2F5004C0EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */; };
 		B0DD265E2B447663004C0EB3 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD265D2B447663004C0EB3 /* ApiSettings.swift */; };
+		B0E505112B5302DA005D0584 /* LeagueUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMainNav.swift; sourceTree = "<group>"; };
 		B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B0DD265D2B447663004C0EB3 /* ApiSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
+		B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueUserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				B0DD26542B4085FD004C0EB3 /* AuthViewModel.swift */,
+				B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,10 +290,10 @@
 			children = (
 				B0507EDC2B012D9F008E6D97 /* PlayerService.swift */,
 				B006A4DE2B0A496600AA6D48 /* UserService.swift */,
+				B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */,
 				B062EC0A2B12432E00CDA542 /* DashboardService.swift */,
 				B0DD264F2B405883004C0EB3 /* AuthService.swift */,
 				B0437A222B49B46E00DFD203 /* GameService.swift */,
-				B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */,
 				B01441A12AEC510D00CA92C9 /* LoginView.swift in Sources */,
 				B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */,
+				B0E505112B5302DA005D0584 /* LeagueUserViewModel.swift in Sources */,
 				B0507ECD2AF7CA6E008E6D97 /* DetailLeagueView.swift in Sources */,
 				B006A4DF2B0A496600AA6D48 /* UserService.swift in Sources */,
 				B006A4D92B0A469700AA6D48 /* League.swift in Sources */,

@@ -9,24 +9,20 @@ import Foundation
 
 struct ServerResponseLeagueUserShow: Decodable {
     let message: String
-    let data: [LeagueUser]
+    let data: [LeagueUser]?
 }
 
-struct LeagueUserShowRequest: Codable {
+struct LeagueUser: Decodable, Identifiable {
     let id: Int
-}
-
-struct LeagueUser: Decodable {
-    let id: Int
-    let userId: Int
-    let leagueId: Int
+    let userId: Int?
+    let leagueId: Int?
     let elo: Int
     let ranking: Int
     let type: Int
     let createdAt: String?
     let updatedAt: String?
-    let user: [User]
-    let league: [League]
+    let user: User
+    let league: League
 
     enum CodingKeys: String, CodingKey {
         case id, elo, ranking, type, user, league

@@ -9,29 +9,25 @@ import SwiftUI
 
 struct LosersSelectionView: View {
     @Binding var selectedLosers: Set<Int>
-    let players = ["Player 1", "Player 2", "Player 3"]
+    @State var usersData: [LeagueUser]?
 
     var body: some View {
         VStack {
             Text("Select Losers")
                 .font(.title3)
 
-            List(players, id: \.self) { player in
+            List(usersData ?? []) { player in
                 HStack {
-                    Text(player)
+                    Text(player.user.name)
                     Spacer()
                     Button(action: {
-                        if selectedLosers.contains(players.firstIndex(of: player)!) {
-                            selectedLosers.remove(players.firstIndex(of: player)!)
+                        if selectedLosers.contains(player.id) {
+                            selectedLosers.remove(player.id)
                         } else {
-                            selectedLosers.insert(players.firstIndex(of: player)!)
+                            selectedLosers.insert(player.id)
                         }
                     }) {
-                        if selectedLosers.contains(players.firstIndex(of: player)!) {
-                            Image(systemName: "checkmark.circle.fill")
-                        } else {
-                            Image(systemName: "circle")
-                        }
+                        Image(systemName: selectedLosers.contains(player.id) ? "checkmark.circle.fill" : "circle")
                     }
                 }
             }

@@ -11,10 +11,10 @@ struct League: Decodable {
     let id: Int
     let icon: String
     let name: String
-    let adminUserId: Int
+    let adminUserId: Int?
     let createdAt: String?
     let updatedAt: String?
-    let admin_user: [User]
+    let admin_user: User?
 
     enum CodingKeys: String, CodingKey {
         case id, icon, name, admin_user

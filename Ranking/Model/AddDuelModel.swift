@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ServerResponseAddDuelShow: Decodable {
+    let message: String
+    let data: [[LeagueUser]]
+}

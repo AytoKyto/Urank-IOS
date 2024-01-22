@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum LeagueUserServiceError: Error {
     case invalidURL
@@ -52,7 +53,8 @@ class LeagueUserService {
 
                 default:
                     completion(.failure(LeagueUserServiceError.requestFailed))
-                    print("Erreur de requestFailed : \(error)")
+                    print("Erreur de requestFailed : \(String(describing: error))")
+                    Alert(title: Text("Une erreur est survenue"))
 
                 }
                 return
@@ -61,7 +63,8 @@ class LeagueUserService {
             // 4. Traitement des données reçues
             guard let data = data else {
                 completion(.failure(LeagueUserServiceError.invalidResponse))
-                print("Erreur de invalidResponse : \(error)")
+                print("Erreur de invalidResponse : \(String(describing: error))")
+                Alert(title: Text("Une erreur est survenue"))
 
                 return
             }
@@ -79,13 +82,14 @@ class LeagueUserService {
         }.resume()
     }
     
-    func getUsersInLeague(completion: @escaping (Result<ServerResponseLeagueUserShow, Error>) -> Void) {
-        
-        guard let url = URL(string: ApiSettings.apiUrl + "users-in-league/1") else {
+    func getUsersInLeague(leagueId: Int, completion: @escaping (Result<ServerResponseLeagueUserShow, Error>) -> Void) {
+
+        guard let url = URL(string: ApiSettings.apiUrl + "/users-in-league/\(leagueId)") else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "URL invalide"])))
-            
             return
         }
+        
+        print(leagueId)
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
@@ -111,12 +115,11 @@ class LeagueUserService {
                 switch httpResponse.statusCode {
                 case 401:
                     completion(.failure(LeagueUserServiceError.authenticationFailed))
-                    print(LeagueUserServiceError.authenticationFailed)
-
+                    
                 default:
                     completion(.failure(LeagueUserServiceError.requestFailed))
                     print("Erreur de requestFailed : \(error)")
-
+                    Alert(title: Text("Une erreur est survenue"))
                 }
                 return
             }
@@ -125,6 +128,7 @@ class LeagueUserService {
             guard let data = data else {
                 completion(.failure(LeagueUserServiceError.invalidResponse))
                 print("Erreur de invalidResponse : \(error)")
+                Alert(title: Text("Une erreur est survenue"))
 
                 return
             }
@@ -134,7 +138,6 @@ class LeagueUserService {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let responseGetLeagueUserShow = try decoder.decode(ServerResponseLeagueUserShow.self, from: data)
                 completion(.success(responseGetLeagueUserShow))
-
             } catch {
                 print("Erreur de décodage : \(error)")
                   completion(.failure(LeagueUserServiceError.decodingError))

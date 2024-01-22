@@ -7,24 +7,19 @@
 
 import Foundation
 
-class AuthViewModel {
-    private var authService: AuthService
-
-    init(authService: AuthService) {
-        self.authService = authService
-    }
+class AuthViewModel: ObservableObject {
+    let authService = AuthService()
 
     func login(request: LoginRequest, completion: @escaping (Bool) -> Void) {
         authService.login(request: request) { result in
             switch result {
-            case .success(let loginResponse):
+            case let .success(loginResponse):
                 // Stocker le token d'authentification de manière sécurisée
                 AuthManager.shared.setAccessToken(token: loginResponse.token)
                 completion(true)
-            case .failure(_):
+            case .failure:
                 completion(false)
             }
         }
     }
 }
-

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AuthMainNav: View {
+    @StateObject var authViewModel = AuthViewModel()
+
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,7 +31,7 @@ struct AuthMainNav: View {
                 }
                 .padding()
 
-                NavigationLink(destination: LoginView()) {
+                NavigationLink(destination: LoginView(authViewModel: authViewModel)) {
                     Text("Se connecter")
                         .foregroundColor(.white)
                         .padding()

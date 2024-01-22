@@ -19,12 +19,12 @@ struct User: Decodable {
     let coins: Int
     let status: String
     let type: Int
-    let avatar: String
-    let bgColor: String
-    let bgAvatar: String
-    let borderAvatar: String
-    let createdAt: String
-    let updatedAt: String
+    let avatar: String?
+    let bgColor: String?
+    let bgAvatar: String?
+    let borderAvatar: String?
+    let createdAt: String?
+    let updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name, email, coins, status, type, avatar

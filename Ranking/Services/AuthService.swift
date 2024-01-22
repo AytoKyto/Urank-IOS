@@ -9,15 +9,10 @@ import Foundation
 
 
 class AuthService {
-    private var apiSettings: ApiSettings
-
-       init(apiSettings: ApiSettings) {
-           self.apiSettings = apiSettings
-       }
-
+    
     func login(request: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> Void) {
                 
-        guard let url = URL(string: apiSettings.apiUrl + "/login") else {
+        guard let url = URL(string: ApiSettings.apiUrl + "/login") else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "URL invalide"])))
             return
         }

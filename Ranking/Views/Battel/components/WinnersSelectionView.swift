@@ -9,38 +9,28 @@ import SwiftUI
 
 struct WinnersSelectionView: View {
     @Binding var selectedWinners: Set<Int>
-    let players = ["Player 1", "Player 2", "Player 3"]
-
+    var usersData: [LeagueUser]
+    
     var body: some View {
         VStack {
             Text("Select Winners")
                 .font(.title3)
 
-            List(players, id: \.self) { player in
+            List(usersData ?? []) { player in
                 HStack {
-                    Text(player)
+                    Text(player.user.name)
                     Spacer()
                     Button(action: {
-                        if selectedWinners.contains(players.firstIndex(of: player)!) {
-                            selectedWinners.remove(players.firstIndex(of: player)!)
+                        if selectedWinners.contains(player.id) {
+                            selectedWinners.remove(player.id)
                         } else {
-                            selectedWinners.insert(players.firstIndex(of: player)!)
+                            selectedWinners.insert(player.id)
                         }
                     }) {
-                        if selectedWinners.contains(players.firstIndex(of: player)!) {
-                            Image(systemName: "checkmark.circle.fill")
-                        } else {
-                            Image(systemName: "circle")
-                        }
+                        Image(systemName: selectedWinners.contains(player.id) ? "checkmark.circle.fill" : "circle")
                     }
                 }
             }
         }
-    }
-}
-
-struct WinnersSelectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        WinnersSelectionView(selectedWinners: .constant([]))
     }
 }
