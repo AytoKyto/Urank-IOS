@@ -2,14 +2,16 @@ import SwiftUI
 
 struct AddDuelView: View {
     @StateObject private var leagueUserViewModel = LeagueUserViewModel()
+    @StateObject var duelViewModel = DuelViewModel(duelService: DuelService())
 
     @State private var selectedLeagueIndex: Int?
     @State private var isLeagueSelectionPresented = false
-    @State private var selectedWinners: Set<Int> = []
-    @State private var selectedLosers: Set<Int> = []
+    @State private var selectedWinners: Set<UserInLeagueIdElo> = []
+    @State private var selectedLosers: Set<UserInLeagueIdElo> = []
     @State private var duelDescription = ""
     @State private var isSummaryViewPresented = false
-
+    @State private var showAlert = false
+    @State private var alertMessage = ""
 
     var selectedLeagueBinding: Binding<String?> {
         Binding(
@@ -39,14 +41,13 @@ struct AddDuelView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                if let leagueUserShow = leagueUserViewModel.leagueUserShow {
+                if leagueUserViewModel.leagueUserShow != nil {
                                // Afficher les données de leagueUserShow
                            } else if leagueUserViewModel.isError {
                                Text("Une erreur est survenue.")
                            } else {
                                Text("Chargement...")
                            }
-                Text(leagueUserViewModel.leagueUserShow?.message ?? "Chargement...")
                 
                 Text(selectedLeagueBinding.wrappedValue ?? "Sélectionnez une ligue")
                     .font(.title3)
@@ -65,14 +66,14 @@ struct AddDuelView: View {
 
                 if selectedLeagueIndex != nil {
                     if let leagueData = leagueUserViewModel.usersInLeague?.data {
-                        WinnersSelectionView(selectedWinners: $selectedWinners, usersData: leagueData)
+                        UsersSelectionView(selectedUsers: $selectedWinners, usersData: leagueData)
                             .padding()
                     } else {
                         Text("No users data available")
                     }
                     
                     if let leagueData = leagueUserViewModel.usersInLeague?.data {
-                        LosersSelectionView(selectedLosers: $selectedWinners, usersData: leagueData)
+                        UsersSelectionView(selectedUsers: $selectedLosers, usersData: leagueData)
                             .padding()
                     } else {
                         Text("No users data available")
@@ -89,7 +90,31 @@ struct AddDuelView: View {
                 if selectedLeagueIndex != nil && !selectedWinners.isEmpty && !selectedLosers.isEmpty {
 
                     Button("Valider") {
-                    }
+                                if let selectedLeague = leagueUserViewModel.leagueUserShow?.data?.first(where: { $0.league.id == selectedLeagueIndex }) {
+                                    let request = DuelRequest(
+                                        leagueId: selectedLeague.league.id,
+                                        isNull: false,
+                                        description: duelDescription,
+                                        winUser: Array(selectedWinners),
+                                        loseUser: Array(selectedLosers)
+                                    )
+                                    duelViewModel.duelAdd(request: request) { success in
+                                        if success {
+                                            alertMessage = "Success message here"
+                                        } else {
+                                            alertMessage = "Error message here"
+                                        }
+                                        showAlert = true
+                                    }
+                                } else {
+                                    alertMessage = "Selected league is nil."
+                                    showAlert = true
+                                }
+                            }
+                            .alert(isPresented: $showAlert) {
+                                Alert(title: Text(alertMessage))
+                            }
+
                     .padding()
                     Button("Show Summary") {
                         isSummaryViewPresented.toggle()
@@ -101,7 +126,7 @@ struct AddDuelView: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .sheet(isPresented: $isLeagueSelectionPresented) {
-            if let leagues = leagueUserViewModel.leagueUserShow?.data {
+            if (leagueUserViewModel.leagueUserShow?.data) != nil {
                 List(leagueUserViewModel.leagueUserShow?.data ?? [], id: \.id) { leagueUser in
                     Button(action: {
                         selectedLeagueIndex = leagueUser.league.id
@@ -120,8 +145,10 @@ struct AddDuelView: View {
 
         .sheet(isPresented: $isSummaryViewPresented) {
             if let selectedLeagueIndex = selectedLeagueIndex,
-               let selectedLeagueName = leagueUserViewModel.leagueUserShow?.data?.first(where: { $0.league.id == selectedLeagueIndex })?.league.name {
-                DuelSummaryView(selectedLeague: selectedLeagueName,
+               let leagues = leagueUserViewModel.leagueUserShow?.data,
+               let selectedLeague = leagues.first(where: { $0.league.id == selectedLeagueIndex }) {
+                
+                DuelSummaryView(selectedLeague: "\(selectedLeague.league.icon) \(selectedLeague.league.name)",
                                 selectedWinners: selectedWinners,
                                 selectedLosers: selectedLosers,
                                 duelDescription: duelDescription)
@@ -133,11 +160,6 @@ struct AddDuelView: View {
             leagueUserViewModel.getLeagueUserShow()
         }
     }
-}
-
-struct Player {
-    let name: String
-    let isWinner: Bool
 }
 
 struct AddDuelView_Previews: PreviewProvider {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LosersSelectionView: View {
-    @Binding var selectedLosers: Set<Int>
+    @Binding var selectedLosers: Set<UserInLeagueIdElo>
     @State var usersData: [LeagueUser]?
 
     var body: some View {
@@ -21,13 +21,15 @@ struct LosersSelectionView: View {
                     Text(player.user.name)
                     Spacer()
                     Button(action: {
-                        if selectedLosers.contains(player.id) {
-                            selectedLosers.remove(player.id)
+                        let user = UserInLeagueIdElo(id: player.id, elo: player.elo, name:player.user.name)
+                        if selectedLosers.contains(user) {
+                            selectedLosers.remove(user)
                         } else {
-                            selectedLosers.insert(player.id)
+                            selectedLosers.insert(user)
                         }
                     }) {
-                        Image(systemName: selectedLosers.contains(player.id) ? "checkmark.circle.fill" : "circle")
+                        Image(systemName: selectedLosers.contains(UserInLeagueIdElo(id: player.id, elo: player.elo, name:player.user.name)) ? "checkmark.circle.fill" : "circle")
+
                     }
                 }
             }

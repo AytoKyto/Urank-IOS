@@ -22,7 +22,7 @@ struct Duel: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case leagueId = "league_id" // Correction ici
+        case leagueId = "league_id"
         case winnerUserId = "winner_user_id"
         case winnerScore = "winner_score"
         case winnerScoreValue = "winner_score_value"
@@ -33,4 +33,50 @@ struct Duel: Decodable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
+}
+
+struct DuelRequest: Codable {
+    let leagueId: Int?
+    let isNull: Bool?
+    let description: String?
+    let winUser: [UserInLeagueIdElo]?
+    let loseUser: [UserInLeagueIdElo]?
+    
+    enum CodingKeys: String, CodingKey {
+        case leagueId = "league_id"
+        case isNull = "is_null"
+        case description
+        case winUser = "win_user"
+        case loseUser = "lose_user"
+    }
+}
+
+struct DuelData: Codable {
+    let id: Int
+    let userId: Int?
+    let duelId: Int?
+    let leagueId: Int?
+    let leagueUserEloInit: Int?
+    let leagueUserEloAdd: Int?
+    let coin: Int
+    let status: Int
+    let createdAt: String?
+    let updatedAt: String?
+    let user: User
+    let league: League
+
+    enum CodingKeys: String, CodingKey {
+            case id
+            case userId = "user_id"
+            case duelId = "duel_id"
+            case leagueId = "league_id"
+            case leagueUserEloInit = "league_user_elo_init"
+            case leagueUserEloAdd = "league_user_elo_add"
+            case coin
+            case status
+            case createdAt = "created_at"
+            case updatedAt = "updated_at"
+            case user
+            case league
+        }
 }

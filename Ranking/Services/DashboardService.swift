@@ -12,25 +12,71 @@ enum DashboardError: Error {
     case requestFailed
     case decodingError
     case invalidResponse
+    case authenticationFailed
 }
 
-func getDashboard() async throws -> Dashboard { // Modifiez le type de retour pour correspondre à DashboardServerResponse
-    let endpoint = "http://rank-back.test/api/dash/user_id=1"
-    guard let url = URL(string: endpoint) else { throw DashboardError.invalidURL }
+class DashboardService {
+    func getDashboardData(completion: @escaping (Result<ResponseDashboard, Error>) -> Void) {
+        
+        guard let url = URL(string: ApiSettings.apiUrl + "/dash") else {
+            completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "URL invalide"])))
+            
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.allHTTPHeaderFields = ApiSettings.apiHeaders
+        
+        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            // 1. Gestion des erreurs de réseau
+            if let error = error {
+                completion(.failure(error))
+                print(error)
+                return
+            }
+            
+            // 2. Vérification de la réponse HTTP
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(LeagueUserServiceError.invalidResponse))
+                return
+            }
+            
+            // 3. Gestion des codes de statut HTTP
+            guard httpResponse.statusCode == 200 else {
+                switch httpResponse.statusCode {
+                case 401:
+                    completion(.failure(LeagueUserServiceError.authenticationFailed))
+                    
+                default:
+                    completion(.failure(LeagueUserServiceError.requestFailed))
+                    print("Erreur de requestFailed : \(String(describing: error))")
+                    
+                }
+                return
+            }
+            
+            // 4. Traitement des données reçues
+            guard let data = data else {
+                completion(.failure(LeagueUserServiceError.invalidResponse))
+                print("Erreur de invalidResponse : \(String(describing: error))")
+                
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let responseGetLeagueUserShow = try decoder.decode(ResponseDashboard.self, from: data)
+                print(responseGetLeagueUserShow)
 
-    let (data, response) = try await URLSession.shared.data(from: url)
+                completion(.success(responseGetLeagueUserShow))
 
-    guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-        throw DashboardError.invalidResponse
-    }
-
-    do {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let serverResponse = try decoder.decode(Dashboard.self, from: data)
-        return serverResponse
-    } catch {
-        print("Erreur de décodage : \(error)")
-        throw DashboardError.decodingError
+            } catch {
+                print("Erreur de décodage : \(error)")
+                completion(.failure(LeagueUserServiceError.decodingError))
+            }
+        }.resume()
     }
 }
+

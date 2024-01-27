@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ServerResponseLeagueUserShow: Decodable {
+struct ServerResponseLeagueUserShow: Codable {
     let message: String
     let data: [LeagueUser]?
 }
 
-struct LeagueUser: Decodable, Identifiable {
+struct LeagueUser: Codable, Identifiable {
     let id: Int
     let userId: Int?
     let leagueId: Int?
@@ -31,4 +31,10 @@ struct LeagueUser: Decodable, Identifiable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
+}
+
+struct UserInLeagueIdElo: Codable, Identifiable, Hashable {
+    let id: Int
+    let elo: Int
+    let name: String
 }

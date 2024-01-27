@@ -6,12 +6,12 @@
 //
 import Foundation
 
-struct ServerResponse: Decodable {
+struct ServerResponse: Codable {
     let message: String
     let data: [User]
 }
 
-struct User: Decodable {
+struct User: Codable {
     let id: Int
     let name: String
     let email: String
@@ -35,4 +35,9 @@ struct User: Decodable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
+}
+
+struct Player {
+    let name: String
+    let isWinner: Bool
 }

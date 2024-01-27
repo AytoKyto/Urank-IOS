@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct WinnersSelectionView: View {
-    @Binding var selectedWinners: Set<UserInLeagueIdElo>
+struct UsersSelectionView: View {
+    @Binding var selectedUsers: Set<UserInLeagueIdElo>
     var usersData: [LeagueUser]
     
     var body: some View {
@@ -21,14 +21,14 @@ struct WinnersSelectionView: View {
                     Text(player.user.name)
                     Spacer()
                     Button(action: {
-                        let user = UserInLeagueIdElo(id: player.id, elo: player.elo, name:player.user.name)
-                          if selectedWinners.contains(user) {
-                              selectedWinners.remove(user)
+                        let user = UserInLeagueIdElo(id: player.user.id, elo: player.elo, name:player.user.name)
+                          if selectedUsers.contains(user) {
+                              selectedUsers.remove(user)
                           } else {
-                              selectedWinners.insert(user)
+                              selectedUsers.insert(user)
                           }
                     }) {
-                        Image(systemName: selectedWinners.contains(UserInLeagueIdElo(id: player.id, elo: player.elo, name:player.user.name)) ? "checkmark.circle.fill" : "circle")
+                        Image(systemName: selectedUsers.contains(UserInLeagueIdElo(id:  player.user.id, elo: player.elo, name:player.user.name)) ? "checkmark.circle.fill" : "circle")
                     }
                 }
             }

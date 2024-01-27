@@ -49,7 +49,6 @@ class LeagueUserService {
                 switch httpResponse.statusCode {
                 case 401:
                     completion(.failure(LeagueUserServiceError.authenticationFailed))
-                    print(LeagueUserServiceError.authenticationFailed)
 
                 default:
                     completion(.failure(LeagueUserServiceError.requestFailed))
@@ -88,9 +87,7 @@ class LeagueUserService {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "URL invalide"])))
             return
         }
-        
-        print(leagueId)
-        
+                
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")

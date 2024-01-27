@@ -22,12 +22,9 @@
 		B01441A32AED3F9E00CA92C9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A22AED3F9E00CA92C9 /* DashboardView.swift */; };
 		B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A72AED500700CA92C9 /* AddDuelView.swift */; };
 		B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A92AED502600CA92C9 /* LeagueView.swift */; };
-		B01441AC2AED506200CA92C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441AB2AED506200CA92C9 /* SettingsView.swift */; };
 		B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E54FB2B3CAA76003FF467 /* Login.swift */; };
-		B0437A232B49B46E00DFD203 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A222B49B46E00DFD203 /* GameService.swift */; };
 		B0437A272B49BB9600DFD203 /* DuelSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */; };
-		B0437A292B49BBF500DFD203 /* LosersSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A282B49BBF500DFD203 /* LosersSelectionView.swift */; };
-		B0437A2B2B49BC0D00DFD203 /* WinnersSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2A2B49BC0D00DFD203 /* WinnersSelectionView.swift */; };
+		B0437A2B2B49BC0D00DFD203 /* UsersSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2A2B49BC0D00DFD203 /* UsersSelectionView.swift */; };
 		B0437A2D2B49BC2100DFD203 /* LeagueSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */; };
 		B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */; };
 		B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */; };
@@ -40,7 +37,6 @@
 		B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */; };
 		B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */; };
 		B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */; };
-		B0507EDD2B012D9F008E6D97 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDC2B012D9F008E6D97 /* PlayerService.swift */; };
 		B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */; };
 		B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC082B123F8200CDA542 /* Dashboard.swift */; };
 		B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC0A2B12432E00CDA542 /* DashboardService.swift */; };
@@ -51,6 +47,10 @@
 		B0DD265A2B41B239004C0EB3 /* AuthMainNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */; };
 		B0DD265C2B41B2F5004C0EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */; };
 		B0DD265E2B447663004C0EB3 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD265D2B447663004C0EB3 /* ApiSettings.swift */; };
+		B0E38FC32B6510FE00EA9481 /* DuelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E38FC22B6510FE00EA9481 /* DuelService.swift */; };
+		B0E38FC52B65146C00EA9481 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E38FC42B65146C00EA9481 /* Utils.swift */; };
+		B0E38FC72B6518A200EA9481 /* DuelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E38FC62B6518A200EA9481 /* DuelViewModel.swift */; };
+		B0E38FC92B65400D00EA9481 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */; };
 		B0E505112B5302DA005D0584 /* LeagueUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,12 +73,9 @@
 		B01441A22AED3F9E00CA92C9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		B01441A72AED500700CA92C9 /* AddDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDuelView.swift; sourceTree = "<group>"; };
 		B01441A92AED502600CA92C9 /* LeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueView.swift; sourceTree = "<group>"; };
-		B01441AB2AED506200CA92C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B01E54FB2B3CAA76003FF467 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		B0437A222B49B46E00DFD203 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelSummaryView.swift; sourceTree = "<group>"; };
-		B0437A282B49BBF500DFD203 /* LosersSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosersSelectionView.swift; sourceTree = "<group>"; };
-		B0437A2A2B49BC0D00DFD203 /* WinnersSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersSelectionView.swift; sourceTree = "<group>"; };
+		B0437A2A2B49BC0D00DFD203 /* UsersSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSelectionView.swift; sourceTree = "<group>"; };
 		B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueSelectionView.swift; sourceTree = "<group>"; };
 		B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueUserService.swift; sourceTree = "<group>"; };
 		B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLeagueView.swift; sourceTree = "<group>"; };
@@ -91,7 +88,6 @@
 		B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlayerView.swift; sourceTree = "<group>"; };
 		B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBattelView.swift; sourceTree = "<group>"; };
 		B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBattelView.swift; sourceTree = "<group>"; };
-		B0507EDC2B012D9F008E6D97 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
 		B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		B062EC072B12009A00CDA542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B062EC082B123F8200CDA542 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
@@ -103,6 +99,10 @@
 		B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMainNav.swift; sourceTree = "<group>"; };
 		B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B0DD265D2B447663004C0EB3 /* ApiSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
+		B0E38FC22B6510FE00EA9481 /* DuelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelService.swift; sourceTree = "<group>"; };
+		B0E38FC42B65146C00EA9481 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B0E38FC62B6518A200EA9481 /* DuelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelViewModel.swift; sourceTree = "<group>"; };
+		B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueUserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,7 +186,6 @@
 				B0507EC82AF7B8C4008E6D97 /* Battel */,
 				B0507EC42AF68CCE008E6D97 /* League */,
 				B0507EB92AF41322008E6D97 /* Dashboard */,
-				B01441AB2AED506200CA92C9 /* SettingsView.swift */,
 				B0507EC02AF68AAA008E6D97 /* MainNavView.swift */,
 				B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */,
 			);
@@ -256,8 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */,
-				B0437A2A2B49BC0D00DFD203 /* WinnersSelectionView.swift */,
-				B0437A282B49BBF500DFD203 /* LosersSelectionView.swift */,
+				B0437A2A2B49BC0D00DFD203 /* UsersSelectionView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -272,6 +270,7 @@
 				B006A4DA2B0A46B500AA6D48 /* LeagueUser.swift */,
 				B006A4DC2B0A46D300AA6D48 /* Duel.swift */,
 				B062EC082B123F8200CDA542 /* Dashboard.swift */,
+				B0E38FC42B65146C00EA9481 /* Utils.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +280,8 @@
 			children = (
 				B0DD26542B4085FD004C0EB3 /* AuthViewModel.swift */,
 				B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */,
+				B0E38FC62B6518A200EA9481 /* DuelViewModel.swift */,
+				B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,12 +289,11 @@
 		B0507ED82B012C24008E6D97 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B0507EDC2B012D9F008E6D97 /* PlayerService.swift */,
 				B006A4DE2B0A496600AA6D48 /* UserService.swift */,
 				B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */,
 				B062EC0A2B12432E00CDA542 /* DashboardService.swift */,
 				B0DD264F2B405883004C0EB3 /* AuthService.swift */,
-				B0437A222B49B46E00DFD203 /* GameService.swift */,
+				B0E38FC22B6510FE00EA9481 /* DuelService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -434,21 +434,21 @@
 				B0437A2D2B49BC2100DFD203 /* LeagueSelectionView.swift in Sources */,
 				B0507EC72AF6A1DE008E6D97 /* LeagueListView.swift in Sources */,
 				B0DD26502B405883004C0EB3 /* AuthService.swift in Sources */,
-				B01441AC2AED506200CA92C9 /* SettingsView.swift in Sources */,
-				B0437A232B49B46E00DFD203 /* GameService.swift in Sources */,
 				B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */,
 				B01441A12AEC510D00CA92C9 /* LoginView.swift in Sources */,
 				B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */,
 				B0E505112B5302DA005D0584 /* LeagueUserViewModel.swift in Sources */,
 				B0507ECD2AF7CA6E008E6D97 /* DetailLeagueView.swift in Sources */,
 				B006A4DF2B0A496600AA6D48 /* UserService.swift in Sources */,
+				B0E38FC32B6510FE00EA9481 /* DuelService.swift in Sources */,
 				B006A4D92B0A469700AA6D48 /* League.swift in Sources */,
+				B0E38FC72B6518A200EA9481 /* DuelViewModel.swift in Sources */,
 				B01441A32AED3F9E00CA92C9 /* DashboardView.swift in Sources */,
 				B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */,
 				B0DD26532B406201004C0EB3 /* AuthManager.swift in Sources */,
+				B0E38FC52B65146C00EA9481 /* Utils.swift in Sources */,
 				B0DD265C2B41B2F5004C0EB3 /* SignUpView.swift in Sources */,
 				B0DD26552B4085FD004C0EB3 /* AuthViewModel.swift in Sources */,
-				B0507EDD2B012D9F008E6D97 /* PlayerService.swift in Sources */,
 				B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */,
 				B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */,
 				B0507EC12AF68AAA008E6D97 /* MainNavView.swift in Sources */,
@@ -460,6 +460,7 @@
 				B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */,
 				B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */,
 				B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */,
+				B0E38FC92B65400D00EA9481 /* DashboardViewModel.swift in Sources */,
 				B01441732AEC4E5300CA92C9 /* RankingApp.swift in Sources */,
 				B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */,
 				B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */,
@@ -469,8 +470,7 @@
 				B0DD265E2B447663004C0EB3 /* ApiSettings.swift in Sources */,
 				B0DD265A2B41B239004C0EB3 /* AuthMainNav.swift in Sources */,
 				B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */,
-				B0437A292B49BBF500DFD203 /* LosersSelectionView.swift in Sources */,
-				B0437A2B2B49BC0D00DFD203 /* WinnersSelectionView.swift in Sources */,
+				B0437A2B2B49BC0D00DFD203 /* UsersSelectionView.swift in Sources */,
 				B0437A272B49BB9600DFD203 /* DuelSummaryView.swift in Sources */,
 				B006A4D52B0A466000AA6D48 /* User.swift in Sources */,
 			);
