@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AddDuelView: View {
     @StateObject private var leagueUserViewModel = LeagueUserViewModel()
-    @StateObject var duelViewModel = DuelViewModel(duelService: DuelService())
+    @StateObject var duelViewModel = DuelViewModel()
 
     @State private var selectedLeagueIndex: Int?
     @State private var isLeagueSelectionPresented = false
@@ -12,6 +12,16 @@ struct AddDuelView: View {
     @State private var isSummaryViewPresented = false
     @State private var showAlert = false
     @State private var alertMessage = ""
+    
+    private func resetFields() {
+            selectedLeagueIndex = nil
+            isLeagueSelectionPresented = false
+            selectedWinners = []
+            selectedLosers = []
+            duelDescription = ""
+            isSummaryViewPresented = false
+            showAlert = false
+        }
 
     var selectedLeagueBinding: Binding<String?> {
         Binding(
@@ -64,6 +74,9 @@ struct AddDuelView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
 
+                Text("Select Winners")
+                    .font(.title3)
+
                 if selectedLeagueIndex != nil {
                     if let leagueData = leagueUserViewModel.usersInLeague?.data {
                         UsersSelectionView(selectedUsers: $selectedWinners, usersData: leagueData)
@@ -72,6 +85,9 @@ struct AddDuelView: View {
                         Text("No users data available")
                     }
                     
+                    Text("Select Loser")
+                        .font(.title3)
+
                     if let leagueData = leagueUserViewModel.usersInLeague?.data {
                         UsersSelectionView(selectedUsers: $selectedLosers, usersData: leagueData)
                             .padding()
@@ -88,9 +104,16 @@ struct AddDuelView: View {
                 Spacer()
 
                 if selectedLeagueIndex != nil && !selectedWinners.isEmpty && !selectedLosers.isEmpty {
+                    Button("Reset") {
+                                       resetFields()
+                                   }
+                                   .padding()
+                                   .background(Color.red)
+                                   .foregroundColor(.white)
+                                   .cornerRadius(10)
 
                     Button("Valider") {
-                                if let selectedLeague = leagueUserViewModel.leagueUserShow?.data?.first(where: { $0.league.id == selectedLeagueIndex }) {
+                        if let selectedLeague = leagueUserViewModel.leagueUserShow?.data.first(where: { $0.league.id == selectedLeagueIndex }) {
                                     let request = DuelRequest(
                                         leagueId: selectedLeague.league.id,
                                         isNull: false,
@@ -100,6 +123,8 @@ struct AddDuelView: View {
                                     )
                                     duelViewModel.duelAdd(request: request) { success in
                                         if success {
+                                            resetFields()
+
                                             alertMessage = "Success message here"
                                         } else {
                                             alertMessage = "Error message here"

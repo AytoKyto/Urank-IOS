@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BattelView: View {
+    @StateObject private var duelViewModel = DuelViewModel()
+
     var body: some View {
         ZStack {
             VStack {
@@ -52,9 +54,19 @@ struct BattelView: View {
                             .fontWeight(.bold)
                         Spacer()
                     }
-                    ScrollView {
-                        CardBattelView(leagueTitle: "Ping pong", scoreElo: 100, player1: "Mathis", player2: "Jeremy")
+                    if let duels = duelViewModel.responseDuelAll?.data {
+                        ScrollView {
+                            ForEach(duels, id: \.id) { item in
+                                NavigationLink(destination: DetailBattelView()) {
+                                    CardBattelView(leagueTitle: item.league.name, scoreElo: Double(item.leagueUserEloAdd ?? 0), player1: item.user.name, player2: item.user.name)
+                                }
+                            }
+                        }
+                    } else {
+                        // Consider adding a loading or empty state view here
+                        Text("Loading...")
                     }
+                    
                     Spacer()
                 }
                 .padding(.all, 20.0)
@@ -62,8 +74,9 @@ struct BattelView: View {
                 .cornerRadius(/*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
             }
         }
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("PrimaryBlack")/*@END_MENU_TOKEN@*/)
-    }
+        .onAppear {
+            duelViewModel.getAllDuel()
+        }    }
     }
 
 struct BBattelView_Previews: PreviewProvider {
