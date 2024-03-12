@@ -12,26 +12,21 @@ struct UsersSelectionView: View {
     var usersData: [LeagueUser]
     
     var body: some View {
-        VStack {
-            Text("Select Winners")
-                .font(.title3)
-
             List(usersData) { player in
                 HStack {
                     Text(player.user.name)
                     Spacer()
                     Button(action: {
-                        let user = UserInLeagueIdElo(id: player.user.id, elo: player.elo, name:player.user.name)
+                        let user = UserInLeagueIdElo(id: player.user.id, elo: player.elo , name:player.user.name)
                           if selectedUsers.contains(user) {
                               selectedUsers.remove(user)
                           } else {
                               selectedUsers.insert(user)
                           }
                     }) {
-                        Image(systemName: selectedUsers.contains(UserInLeagueIdElo(id:  player.user.id, elo: player.elo, name:player.user.name)) ? "checkmark.circle.fill" : "circle")
+                        Image(systemName: selectedUsers.contains(UserInLeagueIdElo(id:  player.user.id, elo: player.elo , name:player.user.name)) ? "checkmark.circle.fill" : "circle")
                     }
                 }
             }
         }
-    }
 }

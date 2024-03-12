@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardBattelView: View {
+struct CardDuelView: View {
     let leagueTitle: String
     let scoreElo: Double
     let player1: String
@@ -69,6 +69,6 @@ struct CardBattelView: View {
 
 struct CardBattleView_Previews: PreviewProvider {
     static var previews: some View {
-        CardBattelView(leagueTitle: "Ping pong", scoreElo: 100, player1: "Mathis", player2: "Jeremy")
+        CardDuelView(leagueTitle: "Ping pong", scoreElo: 100, player1: "Mathis", player2: "Jeremy")
     }
 }

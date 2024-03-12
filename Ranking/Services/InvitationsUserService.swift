@@ -1,13 +1,13 @@
 //
-//  DashboardService.swift
+//  InvitationsUserService.swift
 //  Ranking
 //
-//  Created by Mathis Fleury on 25/11/2023.
+//  Created by Mathis Fleury on 16/03/2024.
 //
 
 import Foundation
 
-enum DashboardError: Error {
+enum InvitationsUserError: Error {
     case invalidURL
     case requestFailed
     case decodingError
@@ -15,19 +15,18 @@ enum DashboardError: Error {
     case authenticationFailed
 }
 
-class DashboardService {
-    func getDashboardData(completion: @escaping (Result<ResponseDashboard, Error>) -> Void) {
-        guard let url = URL(string: ApiSettings.apiUrl + "/dash") else {
+class InvitationsUserService {
+    func getAllInvitationsUser(completion: @escaping (Result<ServerResponseInvitationsUser, Error>) -> Void) {
+        guard let url = URL(string: ApiSettings.apiUrl + "/invitations_user") else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "URL invalide"])))
-
             return
         }
-
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.allHTTPHeaderFields = ApiSettings.apiHeaders
-
+        
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             // 1. Gestion des erreurs de réseau
             if let error = error {
@@ -35,44 +34,42 @@ class DashboardService {
                 print(error)
                 return
             }
-
+            
             // 2. Vérification de la réponse HTTP
             guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(LeagueUserServiceError.invalidResponse))
+                completion(.failure(InvitationsUserError.invalidResponse))
                 return
             }
-
+            
             // 3. Gestion des codes de statut HTTP
             guard httpResponse.statusCode == 200 else {
                 switch httpResponse.statusCode {
                 case 401:
-                    completion(.failure(LeagueUserServiceError.authenticationFailed))
-
+                    completion(.failure(InvitationsUserError.authenticationFailed))
+                    
                 default:
-                    completion(.failure(LeagueUserServiceError.requestFailed))
+                    completion(.failure(InvitationsUserError.requestFailed))
                     print("Erreur de requestFailed : \(String(describing: error))")
                 }
                 return
             }
-
+            
             // 4. Traitement des données reçues
             guard let data = data else {
-                completion(.failure(LeagueUserServiceError.invalidResponse))
+                completion(.failure(InvitationsUserError.invalidResponse))
                 print("Erreur de invalidResponse : \(String(describing: error))")
-
+                
                 return
             }
-
             do {
-                let responseGetLeagueUserShow = try JSONDecoder().decode(ResponseDashboard.self, from: data)
+                let responseGetLeagueUserShow = try JSONDecoder().decode(ServerResponseInvitationsUser.self, from: data)
                 completion(.success(responseGetLeagueUserShow))
-            } catch let DecodingError.keyNotFound(key, context) {
+            } catch DecodingError.keyNotFound(let key, let context) {
                 print("Clé '\(key.stringValue)' manquante dans \(context.codingPath) - \(context.debugDescription)")
             } catch {
                 print("Erreur de décodage: \(error)")
-                completion(.failure(LeagueUserServiceError.decodingError))
+                completion(.failure(InvitationsUserError.decodingError))
             }
-
         }.resume()
     }
 }

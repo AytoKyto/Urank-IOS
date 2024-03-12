@@ -9,10 +9,15 @@ import SwiftUI
 
 struct duelsSectionView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Text("Tout les duels")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            // Add a ForEach loop for duels similar to players if needed
+            CardBattelView(leagueTitle: "Ping pong", scoreElo: 100, player1: "Mathis", player2: "Jeremy")
+        }
     }
-}
-
-#Preview {
-    duelsSectionView()
 }

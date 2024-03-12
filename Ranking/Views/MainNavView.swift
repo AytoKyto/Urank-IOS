@@ -15,20 +15,25 @@ struct MainNavView: View {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
-            AddDuelView()
-                .tabItem {
-                    Image(systemName: "plus.circle.fill")
-                    Text("Ajouter duel")
-                }
             LeagueView()
                 .tabItem {
                     Image(systemName: "list.bullet.rectangle")
                     Text("League")
                 }
-            BattelView()
+            AddDuelView()
+                .tabItem {
+                    Image(systemName: "plus.circle.fill")
+                    Text("Ajouter duel")
+                }
+            DuelView()
                 .tabItem {
                     Image(systemName: "list.dash.header.rectangle")
                     Text("Duel")
+                }
+            DuelView()
+                .tabItem {
+                    Image(systemName: "person.circle.fill")
+                    Text("Profile")
                 }
         }
         .accentColor(Color("PrimaryColor"))

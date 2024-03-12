@@ -9,7 +9,23 @@ import SwiftUI
 
 struct playersSectionView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Text("Tout les joueurs")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            if let players = leagueUserViewModel.leagueUserShow?.data {
+                ForEach(players, id: \.id) { player in
+                    NavigationLink(destination: DetailBattelView(battel: player)) {
+                        CardPlayerView(scoreElo: Double(player.elo), player1: player.user.name)
+                    }
+                }
+            } else {
+                Text("Chargement...")
+            }
+        }
     }
 }
 

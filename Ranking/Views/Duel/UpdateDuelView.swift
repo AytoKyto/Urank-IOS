@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UpdateBattelView: View {
+struct UpdateDuelView: View {
     @State private var selectedLeague = 0
     @State private var selectedWinner = 0
     @State private var selectedLoser = 0
@@ -87,8 +87,8 @@ struct UpdateBattelView: View {
         }
     }
 
-struct UpdateBattelView_Previews: PreviewProvider {
+struct UpdateDuelView_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateBattelView()
+        UpdateDuelView()
     }
 }

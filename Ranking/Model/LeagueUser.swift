@@ -9,7 +9,16 @@ import Foundation
 
 struct ServerResponseLeagueUserShow: Codable {
     let message: String
-    let data: [LeagueUser]?
+    let data: [LeagueUser]
+}
+
+struct ServerResponseLeagueUserDelete: Codable {
+    let message: String
+}
+
+
+struct DuelLeagueUser: Codable {
+    let duel: LeagueUser
 }
 
 struct LeagueUser: Codable, Identifiable {
@@ -37,4 +46,18 @@ struct UserInLeagueIdElo: Codable, Identifiable, Hashable {
     let id: Int
     let elo: Int
     let name: String
+}
+
+struct UserInLeagueRequest: Codable {
+    let usersId: [Int]
+    let userGuest: String
+    let userAdd: Int
+    let leagueId: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case usersId = "users_id"
+        case userGuest = "user_guest"
+        case userAdd = "user_add"
+        case leagueId = "league_id"
+    }
 }

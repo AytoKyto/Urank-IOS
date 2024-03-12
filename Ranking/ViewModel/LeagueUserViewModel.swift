@@ -13,6 +13,7 @@ class LeagueUserViewModel: ObservableObject {
 
     @Published var leagueUserShow: ServerResponseLeagueUserShow?
     @Published var usersInLeague: ServerResponseLeagueUserShow?
+    @Published var leagueDetailSingel: ServerResponseLeagueShowSingel?
 
     @Published var isError: Bool = false
 
@@ -28,13 +29,11 @@ class LeagueUserViewModel: ObservableObject {
                     self?.leagueUserShow = responseGetLeagueUserShow
                 case .failure:
                     self?.isError = true
-                    Alert(title: Text("Une erreur est survenue"))
-
                 }
             }
         }
     }
-    
+
     func getUsersInLeague(leagueId: Int) {
         leagueUserService.getUsersInLeague(leagueId: leagueId) { [weak self] result in
             DispatchQueue.main.async {
@@ -43,8 +42,32 @@ class LeagueUserViewModel: ObservableObject {
                     self?.usersInLeague = responseGetLeagueUserShow
                 case .failure:
                     self?.isError = true
-                    Alert(title: Text("Une erreur est survenue"))
+                }
+            }
+        }
+    }
 
+    func addUsersInLeague(request: UserInLeagueRequest, completion: @escaping (Bool) -> Void) {
+        leagueUserService.addUsersInLeague(request: request) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    completion(true)
+                case .failure:
+                    self?.isError = true
+                }
+            }
+        }
+    }
+
+    func deleteUsersInLeague(userId: Int, leagueId: Int) {
+        leagueUserService.deleteUsersInLeague(userId: userId, leagueId: leagueId) {
+            [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(responseDeleteLeagueUser): break
+                case .failure:
+                    self?.isError = true
                 }
             }
         }

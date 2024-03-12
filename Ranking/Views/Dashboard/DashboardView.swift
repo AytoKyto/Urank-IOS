@@ -67,7 +67,7 @@ struct DashboardView: View {
                             VStack {
                                 if let leagues = dashboardViewModel.responseDashboard?.league {
                                     ForEach(leagues, id: \.duel.id) { item in
-                                        NavigationLink(destination: DetailLeagueView()) {
+                                        NavigationLink(destination: DetailLeagueView(leagueTitle: item.duel.league.name, leagueIcon: item.duel.league.icon, leagueId: item.duel.league.id)) {
                                             CardLeagueView(title: item.duel.league.name, icon: item.duel.league.icon, eloPlayer: Double(item.duel.elo), eloBestPlayer: Double(item.duel.elo))
                                         }
                                     }
@@ -75,7 +75,6 @@ struct DashboardView: View {
                                     Text("Pas de données")
                                 }
                             }
-
 
                             NavigationLink {
                                 LeagueView()
@@ -104,12 +103,12 @@ struct DashboardView: View {
                             }
                             .padding(.top, 10.0)
                             .padding(.leading, 5.0)
-                            
+
                             VStack {
                                 if let duels = dashboardViewModel.responseDashboard?.duelData {
                                     ForEach(duels, id: \.duel.id) { item in
-                                        NavigationLink(destination: DetailLeagueView()) {
-                                            CardBattelView(leagueTitle: item.duel.league.name, scoreElo:  Double(item.duel.leagueUserEloAdd ?? 0), player1: item.duel.user.name, player2: item.duel.user.name)
+                                        NavigationLink(destination: DetailDuelView(duelId: item.duel.duelId)) {
+                                            CardDuelView(leagueTitle: item.duel.league.name, scoreElo: Double(item.duel.leagueUserEloAdd), player1: item.duel.user.name, player2: item.duel.user.name)
                                         }
                                     }
                                 } else {
@@ -118,7 +117,7 @@ struct DashboardView: View {
                             }
 
                             NavigationLink {
-                                LeagueView()
+                                DuelView()
                             }
                         label: {
                                 Text("Voir plus")

@@ -9,9 +9,9 @@ import Foundation
 
 struct ResponseDashboard: Codable {
     let message: String
-    let globalStats: GlobalStats?
+    let globalStats: GlobalStats
     let league: [LeagueDashGroupe]
-    let duelData: [DuelDataGroupe]?
+    let duelData: [DuelDataGroupe]
 
     private enum CodingKeys: String, CodingKey {
         case message
@@ -43,8 +43,8 @@ struct GlobalStats: Codable {
 
 struct LeagueDashGroupe: Codable {
     let duel: LeagueUser
-    let nbrUser: Int?
-    let duelsUsers: [LeagueUser]?
+    let nbrUser: Int
+    let duelsUsers: [LeagueUser]
 
     enum CodingKeys: String, CodingKey {
         case duel
@@ -55,8 +55,8 @@ struct LeagueDashGroupe: Codable {
 
 struct DuelDataGroupe: Codable {
     let duel: DuelData
-    let nbrUser: Int?
-    let duelsUsers: [DuelData]?
+    let nbrUser: Int
+    let duelsUsers: [DuelData]
 
     enum CodingKeys: String, CodingKey {
         case duel

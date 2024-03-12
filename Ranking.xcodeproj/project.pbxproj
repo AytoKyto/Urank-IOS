@@ -23,23 +23,30 @@
 		B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A72AED500700CA92C9 /* AddDuelView.swift */; };
 		B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01441A92AED502600CA92C9 /* LeagueView.swift */; };
 		B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E54FB2B3CAA76003FF467 /* Login.swift */; };
+		B02609322BA5CB3D006E9106 /* InvitationsUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02609312BA5CB3D006E9106 /* InvitationsUserService.swift */; };
+		B02609342BA5CB4C006E9106 /* InvitationsUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02609332BA5CB4C006E9106 /* InvitationsUserViewModel.swift */; };
+		B02609362BA5CB5E006E9106 /* InvitationsUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02609352BA5CB5E006E9106 /* InvitationsUser.swift */; };
+		B02609392BA5CFF5006E9106 /* AddLeagueUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02609382BA5CFF5006E9106 /* AddLeagueUserView.swift */; };
 		B0437A272B49BB9600DFD203 /* DuelSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */; };
 		B0437A2B2B49BC0D00DFD203 /* UsersSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2A2B49BC0D00DFD203 /* UsersSelectionView.swift */; };
 		B0437A2D2B49BC2100DFD203 /* LeagueSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */; };
 		B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */; };
 		B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */; };
-		B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */; };
+		B0507EBF2AF64BE5008E6D97 /* CardDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EBE2AF64BE5008E6D97 /* CardDuelView.swift */; };
 		B0507EC12AF68AAA008E6D97 /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC02AF68AAA008E6D97 /* MainNavView.swift */; };
 		B0507EC72AF6A1DE008E6D97 /* LeagueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC62AF6A1DE008E6D97 /* LeagueListView.swift */; };
-		B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC92AF7B8ED008E6D97 /* BattelView.swift */; };
+		B0507ECA2AF7B8ED008E6D97 /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EC92AF7B8ED008E6D97 /* DuelView.swift */; };
 		B0507ECD2AF7CA6E008E6D97 /* DetailLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ECC2AF7CA6E008E6D97 /* DetailLeagueView.swift */; };
 		B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ECE2AF7CB69008E6D97 /* BarChartView.swift */; };
 		B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */; };
-		B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */; };
-		B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */; };
+		B0507ED32B00FB0B008E6D97 /* UpdateDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED22B00FB0B008E6D97 /* UpdateDuelView.swift */; };
+		B0507ED52B0117B5008E6D97 /* DetailDuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507ED42B0117B5008E6D97 /* DetailDuelView.swift */; };
 		B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */; };
 		B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC082B123F8200CDA542 /* Dashboard.swift */; };
 		B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062EC0A2B12432E00CDA542 /* DashboardService.swift */; };
+		B0A9BBFC2BA386D5004A5C46 /* AddLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9BBFB2BA386D5004A5C46 /* AddLeagueView.swift */; };
+		B0A9BBFE2BA38CC8004A5C46 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9BBFD2BA38CC8004A5C46 /* LeagueService.swift */; };
+		B0A9BC002BA38D94004A5C46 /* LeagueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9BBFF2BA38D94004A5C46 /* LeagueViewModel.swift */; };
 		B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */; };
 		B0DD26502B405883004C0EB3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD264F2B405883004C0EB3 /* AuthService.swift */; };
 		B0DD26532B406201004C0EB3 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD26522B406201004C0EB3 /* AuthManager.swift */; };
@@ -74,24 +81,31 @@
 		B01441A72AED500700CA92C9 /* AddDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDuelView.swift; sourceTree = "<group>"; };
 		B01441A92AED502600CA92C9 /* LeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueView.swift; sourceTree = "<group>"; };
 		B01E54FB2B3CAA76003FF467 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B02609312BA5CB3D006E9106 /* InvitationsUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsUserService.swift; sourceTree = "<group>"; };
+		B02609332BA5CB4C006E9106 /* InvitationsUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsUserViewModel.swift; sourceTree = "<group>"; };
+		B02609352BA5CB5E006E9106 /* InvitationsUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsUser.swift; sourceTree = "<group>"; };
+		B02609382BA5CFF5006E9106 /* AddLeagueUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeagueUserView.swift; sourceTree = "<group>"; };
 		B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelSummaryView.swift; sourceTree = "<group>"; };
 		B0437A2A2B49BC0D00DFD203 /* UsersSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSelectionView.swift; sourceTree = "<group>"; };
 		B0437A2C2B49BC2100DFD203 /* LeagueSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueSelectionView.swift; sourceTree = "<group>"; };
 		B0437A2E2B4AB93300DFD203 /* LeagueUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueUserService.swift; sourceTree = "<group>"; };
 		B0507EBB2AF41382008E6D97 /* CardLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLeagueView.swift; sourceTree = "<group>"; };
-		B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBattelView.swift; sourceTree = "<group>"; };
+		B0507EBE2AF64BE5008E6D97 /* CardDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDuelView.swift; sourceTree = "<group>"; };
 		B0507EC02AF68AAA008E6D97 /* MainNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavView.swift; sourceTree = "<group>"; };
 		B0507EC62AF6A1DE008E6D97 /* LeagueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueListView.swift; sourceTree = "<group>"; };
-		B0507EC92AF7B8ED008E6D97 /* BattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattelView.swift; sourceTree = "<group>"; };
+		B0507EC92AF7B8ED008E6D97 /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
 		B0507ECC2AF7CA6E008E6D97 /* DetailLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLeagueView.swift; sourceTree = "<group>"; };
 		B0507ECE2AF7CB69008E6D97 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlayerView.swift; sourceTree = "<group>"; };
-		B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBattelView.swift; sourceTree = "<group>"; };
-		B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBattelView.swift; sourceTree = "<group>"; };
+		B0507ED22B00FB0B008E6D97 /* UpdateDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDuelView.swift; sourceTree = "<group>"; };
+		B0507ED42B0117B5008E6D97 /* DetailDuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDuelView.swift; sourceTree = "<group>"; };
 		B0507EDE2B012DB2008E6D97 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		B062EC072B12009A00CDA542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B062EC082B123F8200CDA542 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		B062EC0A2B12432E00CDA542 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		B0A9BBFB2BA386D5004A5C46 /* AddLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeagueView.swift; sourceTree = "<group>"; };
+		B0A9BBFD2BA38CC8004A5C46 /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
+		B0A9BBFF2BA38D94004A5C46 /* LeagueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewModel.swift; sourceTree = "<group>"; };
 		B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoxView.swift; sourceTree = "<group>"; };
 		B0DD264F2B405883004C0EB3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B0DD26522B406201004C0EB3 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -181,15 +195,24 @@
 		B01441A62AED4F5E00CA92C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B02609372BA5CFB4006E9106 /* LeagueUser */,
 				B0DD26582B41B1F0004C0EB3 /* Auth */,
 				B0507EBD2AF64BC2008E6D97 /* components */,
-				B0507EC82AF7B8C4008E6D97 /* Battel */,
+				B0507EC82AF7B8C4008E6D97 /* Duel */,
 				B0507EC42AF68CCE008E6D97 /* League */,
 				B0507EB92AF41322008E6D97 /* Dashboard */,
 				B0507EC02AF68AAA008E6D97 /* MainNavView.swift */,
 				B0DD26592B41B239004C0EB3 /* AuthMainNav.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B02609372BA5CFB4006E9106 /* LeagueUser */ = {
+			isa = PBXGroup;
+			children = (
+				B02609382BA5CFF5006E9106 /* AddLeagueUserView.swift */,
+			);
+			path = LeagueUser;
 			sourceTree = "<group>";
 		};
 		B0507EB92AF41322008E6D97 /* Dashboard */ = {
@@ -212,7 +235,7 @@
 		B0507EBD2AF64BC2008E6D97 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				B0507EBE2AF64BE5008E6D97 /* CardBattelView.swift */,
+				B0507EBE2AF64BE5008E6D97 /* CardDuelView.swift */,
 				B0507ECE2AF7CB69008E6D97 /* BarChartView.swift */,
 				B0507ED02AFFB56D008E6D97 /* CardPlayerView.swift */,
 				B0D87EBD2B0915CC0028E0DE /* RoundedBoxView.swift */,
@@ -226,6 +249,7 @@
 				B0507EC52AF68CE4008E6D97 /* components */,
 				B01441A92AED502600CA92C9 /* LeagueView.swift */,
 				B0507ECC2AF7CA6E008E6D97 /* DetailLeagueView.swift */,
+				B0A9BBFB2BA386D5004A5C46 /* AddLeagueView.swift */,
 			);
 			path = League;
 			sourceTree = "<group>";
@@ -238,17 +262,17 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		B0507EC82AF7B8C4008E6D97 /* Battel */ = {
+		B0507EC82AF7B8C4008E6D97 /* Duel */ = {
 			isa = PBXGroup;
 			children = (
 				B0507ECB2AF7B8F2008E6D97 /* components */,
-				B0507EC92AF7B8ED008E6D97 /* BattelView.swift */,
-				B0507ED22B00FB0B008E6D97 /* UpdateBattelView.swift */,
+				B0507EC92AF7B8ED008E6D97 /* DuelView.swift */,
+				B0507ED22B00FB0B008E6D97 /* UpdateDuelView.swift */,
 				B0437A262B49BB9600DFD203 /* DuelSummaryView.swift */,
 				B01441A72AED500700CA92C9 /* AddDuelView.swift */,
-				B0507ED42B0117B5008E6D97 /* DetailBattelView.swift */,
+				B0507ED42B0117B5008E6D97 /* DetailDuelView.swift */,
 			);
-			path = Battel;
+			path = Duel;
 			sourceTree = "<group>";
 		};
 		B0507ECB2AF7B8F2008E6D97 /* components */ = {
@@ -271,6 +295,7 @@
 				B006A4DC2B0A46D300AA6D48 /* Duel.swift */,
 				B062EC082B123F8200CDA542 /* Dashboard.swift */,
 				B0E38FC42B65146C00EA9481 /* Utils.swift */,
+				B02609352BA5CB5E006E9106 /* InvitationsUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +307,8 @@
 				B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */,
 				B0E38FC62B6518A200EA9481 /* DuelViewModel.swift */,
 				B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */,
+				B0A9BBFF2BA38D94004A5C46 /* LeagueViewModel.swift */,
+				B02609332BA5CB4C006E9106 /* InvitationsUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -294,6 +321,8 @@
 				B062EC0A2B12432E00CDA542 /* DashboardService.swift */,
 				B0DD264F2B405883004C0EB3 /* AuthService.swift */,
 				B0E38FC22B6510FE00EA9481 /* DuelService.swift */,
+				B0A9BBFD2BA38CC8004A5C46 /* LeagueService.swift */,
+				B02609312BA5CB3D006E9106 /* InvitationsUserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -431,10 +460,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A9BBFC2BA386D5004A5C46 /* AddLeagueView.swift in Sources */,
 				B0437A2D2B49BC2100DFD203 /* LeagueSelectionView.swift in Sources */,
 				B0507EC72AF6A1DE008E6D97 /* LeagueListView.swift in Sources */,
 				B0DD26502B405883004C0EB3 /* AuthService.swift in Sources */,
-				B0507ECA2AF7B8ED008E6D97 /* BattelView.swift in Sources */,
+				B0507ECA2AF7B8ED008E6D97 /* DuelView.swift in Sources */,
 				B01441A12AEC510D00CA92C9 /* LoginView.swift in Sources */,
 				B01441AA2AED502600CA92C9 /* LeagueView.swift in Sources */,
 				B0E505112B5302DA005D0584 /* LeagueUserViewModel.swift in Sources */,
@@ -444,13 +474,15 @@
 				B006A4D92B0A469700AA6D48 /* League.swift in Sources */,
 				B0E38FC72B6518A200EA9481 /* DuelViewModel.swift in Sources */,
 				B01441A32AED3F9E00CA92C9 /* DashboardView.swift in Sources */,
+				B0A9BBFE2BA38CC8004A5C46 /* LeagueService.swift in Sources */,
 				B0507ED12AFFB56D008E6D97 /* CardPlayerView.swift in Sources */,
 				B0DD26532B406201004C0EB3 /* AuthManager.swift in Sources */,
 				B0E38FC52B65146C00EA9481 /* Utils.swift in Sources */,
 				B0DD265C2B41B2F5004C0EB3 /* SignUpView.swift in Sources */,
 				B0DD26552B4085FD004C0EB3 /* AuthViewModel.swift in Sources */,
+				B0A9BC002BA38D94004A5C46 /* LeagueViewModel.swift in Sources */,
 				B01441A82AED500700CA92C9 /* AddDuelView.swift in Sources */,
-				B0507ED52B0117B5008E6D97 /* DetailBattelView.swift in Sources */,
+				B0507ED52B0117B5008E6D97 /* DetailDuelView.swift in Sources */,
 				B0507EC12AF68AAA008E6D97 /* MainNavView.swift in Sources */,
 				B006A4DB2B0A46B500AA6D48 /* LeagueUser.swift in Sources */,
 				B01441752AEC4E5300CA92C9 /* ContentView.swift in Sources */,
@@ -458,13 +490,16 @@
 				B006A4D72B0A467800AA6D48 /* UserPayment.swift in Sources */,
 				B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */,
 				B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */,
-				B0507ED32B00FB0B008E6D97 /* UpdateBattelView.swift in Sources */,
+				B0507ED32B00FB0B008E6D97 /* UpdateDuelView.swift in Sources */,
+				B02609342BA5CB4C006E9106 /* InvitationsUserViewModel.swift in Sources */,
 				B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */,
 				B0E38FC92B65400D00EA9481 /* DashboardViewModel.swift in Sources */,
+				B02609322BA5CB3D006E9106 /* InvitationsUserService.swift in Sources */,
 				B01441732AEC4E5300CA92C9 /* RankingApp.swift in Sources */,
 				B0507ECF2AF7CB69008E6D97 /* BarChartView.swift in Sources */,
-				B0507EBF2AF64BE5008E6D97 /* CardBattelView.swift in Sources */,
+				B0507EBF2AF64BE5008E6D97 /* CardDuelView.swift in Sources */,
 				B062EC092B123F8200CDA542 /* Dashboard.swift in Sources */,
+				B02609362BA5CB5E006E9106 /* InvitationsUser.swift in Sources */,
 				B0507EDF2B012DB2008E6D97 /* UtilityFunctions.swift in Sources */,
 				B0D87EBE2B0915CC0028E0DE /* RoundedBoxView.swift in Sources */,
 				B0DD265E2B447663004C0EB3 /* ApiSettings.swift in Sources */,
@@ -472,6 +507,7 @@
 				B0507EBC2AF41382008E6D97 /* CardLeagueView.swift in Sources */,
 				B0437A2B2B49BC0D00DFD203 /* UsersSelectionView.swift in Sources */,
 				B0437A272B49BB9600DFD203 /* DuelSummaryView.swift in Sources */,
+				B02609392BA5CFF5006E9106 /* AddLeagueUserView.swift in Sources */,
 				B006A4D52B0A466000AA6D48 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +642,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ranking/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = URank;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -637,6 +674,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ranking/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = URank;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
