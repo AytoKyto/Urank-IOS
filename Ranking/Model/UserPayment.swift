@@ -14,3 +14,4 @@ struct UserPayment: Identifiable, Codable {
     var montant: Double
     var méthode: String
 }
+

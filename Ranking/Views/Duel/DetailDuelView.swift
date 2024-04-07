@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailDuelView: View {
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var duelViewModel = DuelViewModel()
     
     let duelId: Int
@@ -20,10 +21,24 @@ struct DetailDuelView: View {
         VStack(alignment: .center) {
             Spacer()
             if let duelDetailSingle = duelViewModel.duelDetailSingel {
-                Text("DUEL")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("PrimaryTextColor"))
+                HStack {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "arrow.backward")
+                            .frame(width: 35.0, height: 35.0)
+                            .font(.system(size: 20))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 999)
+                                    .stroke(Color("PrimaryTextColor"), lineWidth: 1)
+                            )
+                    }
+                    Spacer()
+
+                    Text("DUEL")
+                    Spacer()
+                   
+                }
 
                 HStack {
                     Text(duelDetailSingle.duelUserMain.league.icon)
@@ -82,5 +97,6 @@ struct DetailDuelView: View {
         .onAppear {
             duelViewModel.getDetailDuelSingel(duelId: duelId)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }

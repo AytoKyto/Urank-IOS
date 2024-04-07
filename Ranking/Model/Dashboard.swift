@@ -23,6 +23,7 @@ struct ResponseDashboard: Codable {
 }
 
 
+
 struct GlobalStats: Codable {
     let userId: Int
     let nbDuel: Int

@@ -48,3 +48,4 @@ struct LeagueRequest: Codable {
     let icon: String
     let name: String
 }
+

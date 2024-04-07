@@ -11,6 +11,35 @@ struct ServerResponse: Codable {
     let data: [User]
 }
 
+struct MyProfileServerResponse: Codable {
+    let message: String
+    let user: User
+    let userStats: UserStats // This should be 'UserStats' not 'userStats'
+    
+    enum CodingKeys: String, CodingKey {
+        case message, user
+        case userStats = "user_stats"
+    }
+}
+
+struct UserStats: Codable { // The struct name should start with an uppercase letter
+    let userId: Int
+    let nbDuel: Int
+    let nbWin: String
+    let nbLose: String
+    let nbNull: String
+    let winRate: String
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case nbDuel = "nb_duel"
+        case nbWin = "nb_win"
+        case nbLose = "nb_lose"
+        case nbNull = "nb_null"
+        case winRate = "win_rate"
+    }
+}
+
 struct User: Codable {
     let id: Int
     let name: String
@@ -41,3 +70,4 @@ struct Player {
     let name: String
     let isWinner: Bool
 }
+

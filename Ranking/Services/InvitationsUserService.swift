@@ -5,6 +5,7 @@
 //  Created by Mathis Fleury on 16/03/2024.
 //
 
+
 import Foundation
 
 enum InvitationsUserError: Error {

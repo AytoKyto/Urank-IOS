@@ -59,6 +59,8 @@
 		B0E38FC72B6518A200EA9481 /* DuelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E38FC62B6518A200EA9481 /* DuelViewModel.swift */; };
 		B0E38FC92B65400D00EA9481 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */; };
 		B0E505112B5302DA005D0584 /* LeagueUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */; };
+		B0E8FC302BC300B2009F7F2E /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8FC2F2BC300B2009F7F2E /* MyProfileView.swift */; };
+		B0E8FC322BC30113009F7F2E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8FC312BC30113009F7F2E /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,8 @@
 		B0E38FC62B6518A200EA9481 /* DuelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelViewModel.swift; sourceTree = "<group>"; };
 		B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		B0E505102B5302DA005D0584 /* LeagueUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueUserViewModel.swift; sourceTree = "<group>"; };
+		B0E8FC2F2BC300B2009F7F2E /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		B0E8FC312BC30113009F7F2E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		B01441A62AED4F5E00CA92C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0E8FC2E2BC30072009F7F2E /* Users */,
 				B02609372BA5CFB4006E9106 /* LeagueUser */,
 				B0DD26582B41B1F0004C0EB3 /* Auth */,
 				B0507EBD2AF64BC2008E6D97 /* components */,
@@ -309,6 +314,7 @@
 				B0E38FC82B65400D00EA9481 /* DashboardViewModel.swift */,
 				B0A9BBFF2BA38D94004A5C46 /* LeagueViewModel.swift */,
 				B02609332BA5CB4C006E9106 /* InvitationsUserViewModel.swift */,
+				B0E8FC312BC30113009F7F2E /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +350,14 @@
 				B0DD265B2B41B2F5004C0EB3 /* SignUpView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		B0E8FC2E2BC30072009F7F2E /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				B0E8FC2F2BC300B2009F7F2E /* MyProfileView.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +504,8 @@
 				B006A4D72B0A467800AA6D48 /* UserPayment.swift in Sources */,
 				B062EC0B2B12432E00CDA542 /* DashboardService.swift in Sources */,
 				B0437A2F2B4AB93300DFD203 /* LeagueUserService.swift in Sources */,
+				B0E8FC302BC300B2009F7F2E /* MyProfileView.swift in Sources */,
+				B0E8FC322BC30113009F7F2E /* UserViewModel.swift in Sources */,
 				B0507ED32B00FB0B008E6D97 /* UpdateDuelView.swift in Sources */,
 				B02609342BA5CB4C006E9106 /* InvitationsUserViewModel.swift in Sources */,
 				B01E54FC2B3CAA76003FF467 /* Login.swift in Sources */,

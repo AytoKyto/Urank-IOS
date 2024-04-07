@@ -82,6 +82,7 @@ struct Duel: Decodable {
     }
 }
 
+
 // Represents a request to create or update a duel, including optional user lists for winners and losers
 struct DuelRequest: Codable {
     let leagueId: Int?

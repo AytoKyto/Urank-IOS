@@ -29,3 +29,4 @@ struct InvitationsUser: Codable, Identifiable {
         case updatedAt = "updated_at"
     }
 }
+

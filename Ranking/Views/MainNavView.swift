@@ -30,7 +30,7 @@ struct MainNavView: View {
                     Image(systemName: "list.dash.header.rectangle")
                     Text("Duel")
                 }
-            DuelView()
+            MyProfileView()
                 .tabItem {
                     Image(systemName: "person.circle.fill")
                     Text("Profile")
