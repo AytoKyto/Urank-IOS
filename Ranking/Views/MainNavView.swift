@@ -40,6 +40,7 @@ struct MainNavView: View {
     }
 }
 
+
 struct MainNavView_Previews: PreviewProvider {
     static var previews: some View {
         MainNavView()
